@@ -1,0 +1,79 @@
+html, body {
+    margin: 0;
+}
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 85%;
+}
+.menu {
+    width: 15%;
+    background-color: rgb(198, 204, 204);
+    padding: 10px 20px 0px;
+}
+.header {
+    background-color: rgb(5, 108, 108);
+    min-height: 150px;
+}
+.img_home {
+    width: 100%;
+    background-image: url(../img/home.jfif);
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}
+.img_sobre {
+    width: 100%;
+    background-image: url(../img/img_sobre.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}
+.img_horario {
+    width: 100%;
+    background-image: url(../img/img_horario.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}
+.img_contatos {
+    width: 100%;
+    background-image: url(../img/img_contato.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}
+.content {
+    background-color: white;
+    min-height: 300px;
+    padding: 20px;
+}
+.footer {
+    background-color: rgb(222, 222, 226);
+    min-height: 20px;
+    text-align: center;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.td {
+    border: 1px solid black;
+    text-align: center;
+}
+

@@ -1,0 +1,37 @@
+mkdir /proxy
+cd /proxy
+
+nano nginx.conf
+=====================================================
+
+
+http {
+   
+    upstream all {
+        server 172.31.0.37:80;
+        server 172.31.0.151:80;
+        server 172.31.0.149:80;
+    }
+
+    server {
+         listen 4500;
+         location / {
+              proxy_pass http://all/;
+         }
+    }
+
+}
+
+
+events { }
+=========================================================
+
+nano dockerfile
+
+	FROM nginx
+	COPY nginx.conf /etc/nginx/nginx.conf
+
+
+docker build -t proxy-app .
+docker container run --name my-proxy-app -dti -p 4500:4500 proxy-app
+

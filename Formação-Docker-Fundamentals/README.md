@@ -116,7 +116,7 @@
     - Acessar diretório ```cd /compose```
     - Crie o arquivo ```vim docker-compose.yml```
     - Exemplo documento
-        - 
+        - https://github.com/brERS/dio.me-bootcamps/blob/main/Forma%C3%A7%C3%A3o-Docker-Fundamentals/Projeto-Criando-um-Container-de-uma-Aplica%C3%A7%C3%A3o-WEB/docker-compose.yml
 
 - Comandos basicos
     - Iniciar container ```docker-compose up -d ```
@@ -131,3 +131,29 @@
         - https://github.com/docker/awesome-compose
     - Como conteinerizar uma aplicação (Conceito)
         - https://aws.amazon.com/pt/blogs/aws-brasil/como-conteinerizar-uma-aplicacao-em-15-minutos/
+
+
+## Módulo 3
+### Trabalhando com Cluster e Docker Swarm
+
+- Comandos básicos
+    - Iniciar swarm ```docker swarm init```
+    - Adicionar host ao node ```docker swarm join --token [token]```
+    - Remover host do node ```docker swarm leave```
+    - Listar nodes ```docker node ls```
+    - Criar serviços ```docker service create --name web-server --replicas 15 -p 80:80 httpd ```
+    - Remove serviço ```docker service rm web-server```
+    - Listar serviços ```docker service ls```
+    - Listar serviço especifico ```docker service ps web-server```
+    - Remover serviço de um node ```docker node update --availability drain "NOME DO NODE"```
+    - Permitir que node receba novos serviços ```docker ndoe update --availability active```
+
+- Material de apoio;
+    - Orquestração de container
+        - https://www.redhat.com/pt-br/topics/containers/what-is-container-orchestration
+    - O que é vagrant
+        - https://blog.mandic.com.br/artigos/devops-conhecendo-vagrant/
+
+- Comandos básicos vagrant
+    - Iniciar ```vagrant up```
+    

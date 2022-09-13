@@ -304,7 +304,92 @@
         - Acesso unário
         - Embedded Systems
         
-### Overview sobre Modelagem de Dados
+### **Overview sobre Modelagem de Dados**
 
+- Siglas
+    - UML (Linguagem Unificada de Modelagem)
+#### **Aula - intrudoção à Modelagem de dados - Parte 1**
+- O que é modelagem
+    - **Modelagem** possui foco na descrição e relacionamento dos elementos que compõem a representação do contexto (mini-mundo).    
+    - Contexto modelagem
+        - Representação
+        - Modelo
+        - Referência
+    - Abstração
+        - **Conceitual** Alto nível
+            - Representação que leigos possam intender.
+        - **Físico** Baixo nível
+            - Implementação do sistema. 
+    - Processos da Modelagem
+        - Mini-mundo
+            - Delimitando o contexto dos dados
+        - Alto nível
+            - Requisitos para criação do modelo
+        - Esquema
+            - Definindo estrutura relacional
+        - SGBD
+            - Implementando/criando o DB
+    - O que é esquema
+        - Facilita a compreensão do contexto dos dados
+        - Modelos de alto nível
+            - Entidade-Relacionamento
+            - UML 
+
+#### **Aula - intrudoção à Modelagem de dados - Parte 2**
+- Como inserir as info no BD
+    - SQL Linguagem declarativa
+        - Create
+        - Alter
+        - Drop
+        - Select
+        - Insert
+        - Update
+- Como acessar
+    - Clientes GUI
+    - Clientes terminal
+#### **Explorando Comandos básicos SQL**
+- Como acessar o MySQL (via Terminal)
+    ```
+    sudo mysql
+    ```
+- Comandos básicos
+    - Listar BDs
+        ```
+        SHOW DATABASES:
+        ```
+    - Criar BD
+        ```
+        CREATE DATABASE "NOME DA BASE";
+        ```
+    - Remover BD
+        ```
+        DROP DATABASE "NOME DA BASE";
+        ```
+    - Acessando/Usando um BD
+        ```
+        USE "NOME DA BASE";
+        ```
+    - Criar tabela
+        ```
+        CREATE TABLE periodicos (
+            id integer,
+            nome varchar(120),
+            issn integer,
+            PRIMARY KEY (id) /*Chave Primaria*/
+        )    
+        ```
+    - Listar tabelas
+        ```
+        SHOW TABLES;
+        ```
+    - Inserir dados
+        ```
+        INSERT INTO "NOME DA TABELA" ("CAMPOS","SEPARADOS","POR","VIRGULAS") VALUES ("VALORES","SEPARADOS","POR","VIRGULAS");
+        ```
+    - Consultar dados
+        ```
+        SELECT * FROM "NOME DA TABELA";
+        ```
+    
 
 

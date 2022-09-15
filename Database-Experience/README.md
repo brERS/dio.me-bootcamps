@@ -3,7 +3,7 @@
 ## **Módulo 1**
 ## **Banco de Dados SQL**
 
-### **Contextualização do Cenário na Área de Banco de Dados**
+### :bookmark_tabs: **Contextualização do Cenário na Área de Banco de Dados**
 - O que são banco de dados:
     - Uma coleção de palavras, que dentre elas há relacionamento entre dados, constituindo então um banco de dados, exemplo
         - Sala de arquivos de uma empresa.
@@ -151,8 +151,7 @@
         - Twitter
             - MySQL
 
-### **Explorando a Abordagem de SGBDs**
-
+### :bookmark_tabs: **Explorando a Abordagem de SGBDs**
 - Siglas
     - OLTP (Online Transaction Processing)
     - OLAP (Online Analytical Processing)
@@ -304,11 +303,10 @@
         - Acesso unário
         - Embedded Systems
         
-### **Overview sobre Modelagem de Dados**
-
+### :bookmark_tabs: **Overview sobre Modelagem de Dados**
 - Siglas
     - UML (Linguagem Unificada de Modelagem)
-#### **Aula - intrudoção à Modelagem de dados - Parte 1**
+#### :page_facing_up: **Aula - intrudoção à Modelagem de dados - Parte 1**
 - O que é modelagem
     - **Modelagem** possui foco na descrição e relacionamento dos elementos que compõem a representação do contexto (mini-mundo).    
     - Contexto modelagem
@@ -334,8 +332,7 @@
         - Modelos de alto nível
             - Entidade-Relacionamento
             - UML 
-
-#### **Aula - intrudoção à Modelagem de dados - Parte 2**
+#### :page_facing_up: **Aula - intrudoção à Modelagem de dados - Parte 2**
 - Como inserir as info no BD
     - SQL Linguagem declarativa
         - Create
@@ -347,7 +344,7 @@
 - Como acessar
     - Clientes GUI
     - Clientes terminal
-#### **Explorando Comandos básicos SQL**
+#### :page_facing_up: **Aula - Explorando Comandos básicos SQL**
 - Como acessar o MySQL (via Terminal)
     ```
     sudo mysql
@@ -390,6 +387,262 @@
         ```
         SELECT * FROM "NOME DA TABELA";
         ```
-    
 
+### :bookmark_tabs: **Arquitetura de Banco de Dados**
+- Siglas  
+    - DDL (Data Definition Language)
+    - SDL (Linguagem de Definição de Armazenamento)
+    - VDL (Linguagem de Definição de Visões)
+    - DCL (Linguagem de Controle de Dados) 
+    - TCL (Linguagem de Controle de Transações) 
+#### :page_facing_up: **Aula - Arquitetura de BD: Modelos** 
+- Modelo
+    - Abstração
+        - Data model
+            - Operações
+            - Classificação
+                - Estrutura
+                    - Modelo de Dados auto-descritivos
+                        - Modelo de Dados Conceitual  
+                            - Representação de auto nível incluindo quais são os requisitos do sistema
+                        - Modelo de Dados Físico  
+                            - Especificando requesito dos sistemas
+                        - Modelo de dados relacional
+                            - Representa um esquema relacional                    
+                    - Modelo de Dados Conceitual (Visão  de alto nível)
+                        - Entidade
+                        - Atributos
+                        - Relacionamento
+                        - Modelo Entidade-Relacionamento
+                        - Generalização
+                        - Especialização
+                    - Modelo de Dados Físico  (Especialista)
+                        - Índices
+                        - Hashes
+                    - Modelo de Dados de implementação (Representacional)
+                        - Modelo de dados relacional
+                            - Constrains
+                            - Linguagens
+                            - Operações
+#### :page_facing_up: **Aula - Arquitetura de BD: Esquema, Instâncias e Estados de um BDs**
+- Esquema
+    - Descrição do banco de dados
+        - Diagramas
+            - Construct
+    - Snapshot
+        - Mudança de estado
+            - INSERT
+            - DELETE
+            - UPDATE
+    - Descrição & Dados
+        - Estado Inicial
+        - Estado Válido
+    - Meta dados
+        - Descrição esquema
+        - Construtores
+        - Constrains
+#### :page_facing_up: **Aula - Three-Schema Architecture**    
+- Three-Schema
+    - Arquitetura
+        - External Level
+        - Conceptual Level
+        - Internal Level
+#### :page_facing_up: **Aula - Linguagens para SGBD**       
+- Linguagens
+    - DDL
+    - SDL
+    - VDL
+    - DCL
+    - DML
+#### :page_facing_up: **Aula - Interfaces de SGBDs**      
+- Interface
+    - Web Clients
+        - Baseado em lista (Requisições e estrutura)
+    - App Mobile
+        - Acesso à dados (Bancos, reservas)
+    - Forms
+        - Interface para novos dados (Preenchimento total ou parcial)
+    - GUI
+        - Diagrama (Query -> Manipulando o diagrama)
+    - NLI
+        - Interpreta a linguage natural (Busca pela palavra reservada e conteúdo)
+    - Pesquisa Keyword
+        - Macth (Palavra/Doc)
+    - Speech input/output
+        - Contexto limitado (Requisição e retorno em linguage natural exemplo)
+    - Interfaces
+        - Naive (Operações repetitivas)
+        - DBA (Comandos com nível de privilégio)
+#### :page_facing_up: **Aula - Ambientes e utilities de SGBD**
+- Ambientes
+    - Componentes
+        - Software
+        - Modularizado
+        - Gerenciamento
+            - Monitoramento
+            - Reorganização do storage
+            - Backup
+            - Loading
+#### :page_facing_up: **Aula - Arquitetura Modelo Cliente-Servidor**     
+- Arquiteturas
+    - Física Centralizada
+    - Física Cliente Servidor    
+        - Three-tier
+            - Client
+            - WebServer ou Aplicação Server
+            - Database Server
+#### :page_facing_up: **Aula - Classificação de SGBDs**   
+- Classificação
+    - Parâmetros 
+        - Modelo de dados
+        - Nº de usuários
+        - Nº de sites
+        - Custo
+        - Tipo de caminho de acesso
+    - Relacional
+        - Coleções de tabela
+            - Tabela -> File
+        - Alto Nível
+            - View -> User
+
+### :bookmark_tabs: **Fundamentos de Modelagem e Projeto de Banco de Dados**
+- Siglas  
+    - NoSQL (Not Only SQL).
+    - OLTP (Online Transaction Processing)
+    - OLAP (Online Analytical Processing)
+#### :page_facing_up: **Aula - Mundo Fechado e mini-mundo** 
+- CWA
+    - Preposição
+        - Logica de predicados
+- Mundo Fechado
+    - Return False se não estiver contemplado no modelo
+- Mini-Mundo
+    - É um pedaço de um mundo onde quero modelar
+#### :page_facing_up: **Aula - Álgebra Relacional**
+- Lógica do Predicados
+    - **Predicado** é a parte da oração que contém o verbo e que tras informações sobre o sujeito.
+        - Critério: Having, Where
+    - Conjunto de Operações
+        - Op. de conjuntos
+        - Op. de BD relacional
+    - Conjunto de Funções
+        - MAX, AVG, ANY, COUNT, SUM, MIN
+#### :page_facing_up: **Aula - Álgebra Relacional e Projeto de Bando de dados**
+- Consultas Complexas
+    - Tradeoff
+        -  Barganha entre consistência e disponibilidade.
+    - Processo
+        - Projeto Conceitual
+            - Definição de requisitos do sistema
+        - Projeto Lógico
+            - Modelagem de diagrama
+        - Projeto Físico
+            - Definição de tipo de SGBD
+                - Relacional
+                - NoSql
+                - OLTP
+                - OLAP
+        - Validação
+            - Definição de requisitos
+                - Disponibilidade
+                - Segurança
+                - indixes
+        - Produção
+            - Efetivamente colocar o SGDBs em Produção
+        - Manutenção
+            - Aprimoração 
+#### :page_facing_up: **Aula - Falando sobre Modelagem**
+- Processo
+    - Planejar
+        - Identificar seus problemas
+    - Fazer
+        - Testar possíveis soluções
+    - Checar
+        - Estudar resultados
+    - Agir
+        - Implementar a melhor solução
+#### :page_facing_up: **Aula - Projeto: Como "nasce" um Banco de Dados?**    
+- O que eu quero representar ?
+    - Entender o contexto e requesitos
+    - Perfil
+- Processo evolutivo ou gradual
+    - Implementação
+    - Arquitetura
+    - Modelo
+    - Funcionalidades
+#### :page_facing_up: **Aula - Design de BDs - Projeto Conceitual**    
+- Projeto Conceitual
+    - Como Criar o modelo ?
+        - Linguagens de modelagem de dados (Representação)
+            - Graficas
+            - Textuais
+    - 1º Passo
+        - Coleta de Dados
+        - Análise
+#### :page_facing_up: **Aula - Projeto conceitual: Entendendo o passo a passo**
+- Projeto Conceitual (Continuação Aula anterior)
+    - Esquema Conceitual
+        - Modelo Entidade Relacionamento
+        - UML - Diagrama de Classes
+    - Requisições funcionais da aplicação
+        - Modelo de Alto Nível
+            - Requisitos
+                - Funcionais
+                    - O que executar?
+                    - Quais processos?
+                - Não Funcionais
+                    - Segurança 
+                    - Desempenho
+            - **OBS:** Alto Nível Não tem a informação de como vai ser armazenada
+    - Fluxo da informação
+        - Dados e Requisitos
+            - Coleta Análise
+        - Esquema conceitual
+            - Design Conceitual
+#### :page_facing_up: **Aula - Implementação: Projeto Lógico e Físico**
+- Esquema Lógico
+    - Mapeamento
+        - Especificando
+    - Pontos de atenção
+        - Entidades
+            - Qual tipo de entidade?
+        - Relacionamentos
+            - Binário, n-ário?
+                - Cardinalidade [1:1,1:n,n:1,n:n]
+            - Atributos
+                - Multivalorados ?
+
+### :bookmark_tabs: **Modelo de Entidade Relacionamento com Banco de Dados**
+#### :page_facing_up: **Aula - Modelo ER: Tipos de Entidades, Chaves e Atributos**
+- Diagrama ER
+    - Foco no Esquema
+        - Raras Modificações
+        - Facilidade de Manipular
+        - Esquema ER do banco de dados
+- Entidades
+    - Objetos
+        - Componentes básico
+        - Existencia independente
+        - Atributos
+- Atributos
+    - Propriedades
+        - características/Descrição das entidades
+        - Atributos relacionados as instâncias
+#### :page_facing_up: **Aula - Tipos de Atributos dento do Modelo ER**
+- Atributos
+    - Atômicos/Compostos
+        - Estrutura
+    - Simples/Multivalorados
+        - Valores
+    - stored/Deviravos
+        - Exemplo: Data de nascimento/Stored - > Idade/Derivado
+    - Nulos
+        - Grau (Opcional)
+    - Complexos
+        - Composto exemplo Endereço completo
+#### :page_facing_up: **Aula - O que é a Entidade Fraca no modelo ER?**
+- Entidade Fraca
+    - Chave não obrigatória
+    - Depêndencia
+    - Exclusão cascata
 

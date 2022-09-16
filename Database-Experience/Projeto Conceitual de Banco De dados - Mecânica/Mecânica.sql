@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema dio
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema dio
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `dio` DEFAULT CHARACTER SET utf8 ;
+USE `dio` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Cliente`
+-- Table `dio`.`Cliente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Cliente` (
+CREATE TABLE IF NOT EXISTS `dio`.`Cliente` (
   `idCliente` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(45) NOT NULL,
   `Telefone` VARCHAR(45) NOT NULL,
@@ -29,9 +29,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Tipo Serviço`
+-- Table `dio`.`Tipo Serviço`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Tipo Serviço` (
+CREATE TABLE IF NOT EXISTS `dio`.`Tipo Serviço` (
   `idStatus` INT NOT NULL AUTO_INCREMENT,
   `Tipo` VARCHAR(45) NOT NULL COMMENT 'Tipos: consertados ou revisões  periódicas',
   PRIMARY KEY (`idStatus`))
@@ -39,9 +39,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Equipe`
+-- Table `dio`.`Equipe`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Equipe` (
+CREATE TABLE IF NOT EXISTS `dio`.`Equipe` (
   `idEquipe` INT NOT NULL AUTO_INCREMENT,
   `Nome da equipe` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idEquipe`))
@@ -49,9 +49,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Carro`
+-- Table `dio`.`Carro`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Carro` (
+CREATE TABLE IF NOT EXISTS `dio`.`Carro` (
   `idCarro` INT NOT NULL AUTO_INCREMENT,
   `Modelo` VARCHAR(45) NOT NULL,
   `Placa` VARCHAR(45) NOT NULL,
@@ -64,26 +64,26 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Carro` (
   INDEX `fk_Carro_Equipe1_idx` (`idEquipe` ASC) VISIBLE,
   CONSTRAINT `fk_Carro_Cliente`
     FOREIGN KEY (`idCliente`)
-    REFERENCES `mydb`.`Cliente` (`idCliente`)
+    REFERENCES `dio`.`Cliente` (`idCliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Carro_Tipo Serviço1`
     FOREIGN KEY (`idStatus`)
-    REFERENCES `mydb`.`Tipo Serviço` (`idStatus`)
+    REFERENCES `dio`.`Tipo Serviço` (`idStatus`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Carro_Equipe1`
     FOREIGN KEY (`idEquipe`)
-    REFERENCES `mydb`.`Equipe` (`idEquipe`)
+    REFERENCES `dio`.`Equipe` (`idEquipe`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Mecanicos`
+-- Table `dio`.`Mecanicos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Mecanicos` (
+CREATE TABLE IF NOT EXISTS `dio`.`Mecanicos` (
   `idMecanicos` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(45) NOT NULL,
   `Endereço` VARCHAR(45) NOT NULL,
@@ -92,16 +92,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Mecanicos` (
   INDEX `fk_Mecanicos_Equipe1_idx` (`idEquipe` ASC) VISIBLE,
   CONSTRAINT `fk_Mecanicos_Equipe1`
     FOREIGN KEY (`idEquipe`)
-    REFERENCES `mydb`.`Equipe` (`idEquipe`)
+    REFERENCES `dio`.`Equipe` (`idEquipe`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Especialidades`
+-- Table `dio`.`Especialidades`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Especialidades` (
+CREATE TABLE IF NOT EXISTS `dio`.`Especialidades` (
   `idEspecialidades` INT NOT NULL AUTO_INCREMENT,
   `Especialidade` VARCHAR(45) NOT NULL,
   `idMecanicos` INT NOT NULL,
@@ -109,16 +109,16 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Especialidades` (
   INDEX `fk_Especialidades_Mecanicos1_idx` (`idMecanicos` ASC) VISIBLE,
   CONSTRAINT `fk_Especialidades_Mecanicos1`
     FOREIGN KEY (`idMecanicos`)
-    REFERENCES `mydb`.`Mecanicos` (`idMecanicos`)
+    REFERENCES `dio`.`Mecanicos` (`idMecanicos`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Status OS`
+-- Table `dio`.`Status OS`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Status OS` (
+CREATE TABLE IF NOT EXISTS `dio`.`Status OS` (
   `idStatus OS` INT NOT NULL AUTO_INCREMENT,
   `Status` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idStatus OS`))
@@ -126,9 +126,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Autorização`
+-- Table `dio`.`Autorização`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Autorização` (
+CREATE TABLE IF NOT EXISTS `dio`.`Autorização` (
   `idAutorização` INT NOT NULL AUTO_INCREMENT,
   `Status` VARCHAR(45) NOT NULL COMMENT 'Autorizado pelo cliente\nNão autorizado pelo cliente',
   PRIMARY KEY (`idAutorização`))
@@ -136,9 +136,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`OS`
+-- Table `dio`.`OS`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`OS` (
+CREATE TABLE IF NOT EXISTS `dio`.`OS` (
   `idOS` INT NOT NULL AUTO_INCREMENT,
   `data de emissão` DATE NOT NULL,
   `data para conclusão` DATE NULL,
@@ -152,26 +152,26 @@ CREATE TABLE IF NOT EXISTS `mydb`.`OS` (
   INDEX `fk_OS_Autorização1_idx` (`idAutorização` ASC) VISIBLE,
   CONSTRAINT `fk_OS_Status OS1`
     FOREIGN KEY (`idStatus OS`)
-    REFERENCES `mydb`.`Status OS` (`idStatus OS`)
+    REFERENCES `dio`.`Status OS` (`idStatus OS`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OS_Equipe1`
     FOREIGN KEY (`idEquipe`)
-    REFERENCES `mydb`.`Equipe` (`idEquipe`)
+    REFERENCES `dio`.`Equipe` (`idEquipe`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_OS_Autorização1`
     FOREIGN KEY (`idAutorização`)
-    REFERENCES `mydb`.`Autorização` (`idAutorização`)
+    REFERENCES `dio`.`Autorização` (`idAutorização`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Serviços`
+-- Table `dio`.`Serviços`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Serviços` (
+CREATE TABLE IF NOT EXISTS `dio`.`Serviços` (
   `idServiços` INT NOT NULL AUTO_INCREMENT,
   `serviço` VARCHAR(45) NOT NULL,
   `valor` FLOAT NOT NULL,
@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Serviços` (
   INDEX `fk_Serviços_OS1_idx` (`idOS` ASC) VISIBLE,
   CONSTRAINT `fk_Serviços_OS1`
     FOREIGN KEY (`idOS`)
-    REFERENCES `mydb`.`OS` (`idOS`)
+    REFERENCES `dio`.`OS` (`idOS`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

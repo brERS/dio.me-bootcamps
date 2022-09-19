@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - Primeiros Passos com HTML</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/custom.css">
+</head>
+
+<body>
+    <header class="col-md-12 header">
+        <div class="text-center title_header">
+            Módulo 1 - Primeiros Passos com HTML
+        </div>
+    </header>
+    <div class="row rows content">
+        <nav class="nav">
+            <ul class="nav_ul">
+                <li><a href="computador.html"><i class="bi-pc-display"></i>Computadores</a></li>
+                <li><a href="clients.html"><i class="bi-pc-display-horizontal"></i>Clients</a></li>
+                <li><a href="servers.html"><i class="bi-pc"></i>Servers</a></li>
+                <li><a href="estrutura.html"><i class="bi-filetype-html"></i>Estrutura HTML</a></li>
+                <li><a href="listas.html"><i class="bi-list-ul"></i>Listas ordenadas e não ordenadas</a></li>
+            </ul>
+        </nav>
+
+        <main class="main">
+
+            <section id="clients" class="col-md-12">
+                <h2 class="title_page">Clients</h2>
+
+                <h4> Lado cliente</h4>
+                <p>
+                    Normalmente, um cliente é uma aplicação de computador, como um navegador web, que executa em um
+                    computador local do usuário ou em uma estação de trabalho e conecta-se a um servidor quando
+                    necessário.
+                </p>
+                <p>
+                    As operações podem ser realizadas no lado cliente pois elas necessitam de acesso a
+                    informações ou funcionalidades que estão disponíveis no cliente mas não no servidor, devido ao
+                    usuário necessitar observá-las ou fornecer entradas, ou devido ao servidor precisar de força de
+                    processamento para realizar operações em tempo hábil para todos os clientes que ele serve.
+                </p>
+            </section>
+
+            <article id="ref" class="col-md-12">
+                <address> Saiba mais em:
+                    <a href="https://pt.wikipedia.org/wiki/Cliente_(computa%C3%A7%C3%A3o)" target="_blank">Wikipédia</a>
+                </address>
+            </article>
+
+        </main>
+
+        <aside class="aside">
+            <header class="aside_header">
+                <h5>Nesse conteúdo</h5>
+            </header>
+            <ul class="aside_ul">
+                <li><a href="#clients">Lado cliente</a></li>
+                <li><a href="#ref">Referência</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer class="col-md-12 footer text-center">
+        Desenvolvido por brERS
+    </footer>
+</body>
+
+</html>

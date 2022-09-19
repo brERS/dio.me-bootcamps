@@ -1,161 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página - Módulo I - Primeiros Passos com HTML</title>
+    <title>Projeto - Primeiros Passos com HTML</title>
+    <meta http-equiv="refresh" content="5; URL='src/computador.html" />
 </head>
 
 <body>
-    <h1>Módulo 1 - Primeiros Passos com HTML</h1>
-    <hr />
-
-    <h2>Índice</h2>
-    <p>
-        <strong>
-            <u>INSTRUÇÕES:</u>
-        </strong>
-        <br />
-        Nesse módulo vimos um pouco da história dos computadores, internet e a web. O que é HTML e como funciona.
-        <br />
-        Como criar uma página web utilizando as tags
-    </p>
-    <ul>
-        <li><a href="#historia">História dos computadores</a></li>
-        <li><a href="#clients">O que são <i>Clients</i>?</a></li>
-        <li><a href="#Servers">O que são <i>Servers</i>?</a></li>
-        <li><a href="#estrutura">Como é uma estrutura básica de um HTML?</a></li>
-        <li><a href="#listas">Entendendo a diferença entre listas ordenadas e não ordenadas</a></li>
-        <li><a href="#ref">Links de referências</a></li>
-    </ul>
-
-    <h2 id="historia">História dos computadores</h2>
-    <p>
-        <strong>
-            <u>INSTRUÇÕES:</u>
-        </strong>
-        <br />
-        Durante o travamento da Segunda Guerra Mundial a Marinha dos Estados Unidos, em conjunto com a Universidade de
-        <br />
-        Harvard, desenvolveu o computador Harvard Mark I, projetado pelo professor Howard Aiken, com base no calculador
-        <br />
-        analítico de Babbage.
-        <br />
-        <strong>Saiba mais em </strong>
-        <i>
-            <a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_computa%C3%A7%C3%A3o" target="_blank"
-                target="_blank">Wikipedia</a>
-        </i>
-    </p>
-
-
-    <h2 id="clients">O que são <i>Clients</i>?</h2>
-    <p>
-        <strong>
-            <u>INSTRUÇÕES:</u>
-        </strong>
-        <br />
-        <strong>Cliente</strong> é um termo empregado em computação e representa uma entidade que consome os serviços de
-        uma outra
-        entidade servidora,
-        <br />
-        em geral através do uso de uma rede de computadores numa arquitetura cliente-servidor.
-        <br />
-        <strong>Saiba mais em </strong>
-        <i>
-            <a href="https://pt.wikipedia.org/wiki/Cliente_(computa%C3%A7%C3%A3o)" target="_blank">Wikipedia</a>
-        </i>
-    </p>
-
-
-    <h2 id="Servers">O que são <i>Servers</i>?</h2>
-    <p>
-        <strong>
-            <u>INSTRUÇÕES:</u>
-        </strong>
-        <br />
-        <strong>Servers</strong> em informática é um software ou computador, com sistema de computação centralizada que
-        fornece
-        <br />
-        serviços a uma rede de computadores, chamada de cliente.
-        <br />
-        <strong>Saiba mais em </strong>
-        <i>
-            <a href="https://pt.wikipedia.org/wiki/Servidor" target="_blank">Wikipedia</a>
-        </i>
-    </p>
-
-
-    <h2 id="estrutura">Como é uma estrutura básica de um HTML?</h2>
-    <p>
-        <strong>
-            <u>INSTRUÇÕES:</u>
-        </strong>
-        <br />
-    <pre>
-            <span></span>
-            <span class="linenos" data-line="1"></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
-            <span class="linenos" data-line="2"></span><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"pt-BR"</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="3"></span>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="4"></span>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="5"></span>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Teste de Página<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="6"></span>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="7"></span>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="8"></span>    <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Teste de página<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="9"></span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Um teste de página<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="10"></span>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Este texto está em itálico<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="11"></span>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-            <span class="linenos" data-line="12"></span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-        </pre>
-    <br />
-    <strong>Saiba mais em </strong>
-    <i>
-        <a href="https://pt.wikipedia.org/wiki/HTML5" target="_blank">Wikipedia</a>
-    </i>
-    </p>
-
-
-    <h2 id="listas">Entendendo a diferença entre listas ordenadas e não ordenadas</h2>
-    <p>
-        <strong>
-            <u>INSTRUÇÕES:</u>
-        </strong>
-        <br />
-    <p>
-        As<strong> listas não ordenadas </strong> ou numeradas são usadas para listar itens, sem se preocupar com sua
-        sequência.
-        Chamamos de lista de marcadores apenas.
-    </p>
-    <p>
-        As <strong>listas ordenadas</strong> ou numeradas são usadas para indicar alguma sequência ou numeração
-    </p>
-    <strong>Saiba mais em </strong>
-    <i>
-        <a href="https://www.luis.blog.br/listas-ordenadas-nao-ordenadas-e-de-definicao.html"
-            target="_blank">luis.blog</a>
-    </i>
-    </p>
-
-
-    <h2 id="ref">Links de referências</h2>
-    <p>
-        <strong>
-            <u>INSTRUÇÕES:</u>
-        </strong>
-        Coloque links para outras páginas que falam sobre estes assuntos. Não esquece
-        de que precisa abrir em outra aba/janela do navegador.
-    </p>
-    <ul>
-        <li><a href="https://dio.me/" target="_blank">http://dio.me</a></li>
-        <li><a href="http://w3c.org" target="_blank">http://w3c.org</a></li>
-        <li><a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" target="_blank">Wikipedia</a>
-        <li><a href="https://www.luis.blog.br/listas-ordenadas-nao-ordenadas-e-de-definicao.html"
-                target="_blank">luis.blog</a>
-        </li>
-    </ul>
-
+    ...
 </body>
 
 </html>

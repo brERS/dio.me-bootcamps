@@ -646,3 +646,213 @@
     - Depêndencia
     - Exclusão cascata
 
+
+
+
+
+### :bookmark_tabs: **Introdução ao MongoDB e Bancos de Dados NoSQL**
+#### :page_facing_up: **Aula - Introdução**
+- Tipos de bancos de dados NoSQL
+    - Grafos (Neo4j)
+        - Comum em detecção de fraudes, mecanismos de recomendação, redes sociais, sistemas de arquivos, games...
+        - Comandos
+            - Criar Grafo:
+                ```
+                CREATE (:"NOME_LABEL")
+                ```
+            - Inserir:
+                ```
+                CREATE (:"NOME_LABEL" { name: "Edgar", age: 29, hobbies: ['Jogar, series'] } )
+                ```    
+            - Consultar:
+                ``` 
+                MATCH (Edgar) RETURN Edgar
+                ```
+            - Atualizar:
+                ```
+                MATCH (Edgar:"NOME_LABEL" { name: "Edgar"} ) SET Edgar.hobbies=['Futebol'];
+                ```
+            - Remover:
+                ```
+                MATCH (Edgar:"NOME_LABEL" { name: "Edgar"} ) DELETE Edgar;
+                ```
+    - Column (Cassandra)
+        - Comum para registro de transações
+        - Comandos
+            - Criar:
+                ```
+                CREATE KEYSPACE "NOME_KEYSPACE" WITH replication = {'class':'SimpleStrategy', 'replication_factor':'}; 
+                ```
+            - Usar KEYSPACE:
+                ```
+                Use "NOME_KEYSPACE";
+                ```
+            - Criar COLUMNFAMILY:
+                ```
+                CREATE COLUMNFAMILY "NOME_COLUMNFAMILY" (name TEXT PRIMARY KEY, age int);
+                ```
+            - Alterar COLUMNFAMILY:
+                ```
+                ALTER COLUMNFAMILY "NOME_COLUMNFAMILY" ADD hobby TEXT;
+                ```
+            - Inserir:
+                ```
+                INSERT INTO "NOME_COLUMNFAMILY" (name, age) VALUES('Edgar','29');
+                OR
+                INSERT INTO "NOME_COLUMNFAMILY" JSON '{"name":"Edgar","age":29 }';
+                ```
+            - Consultar;
+                ```
+                SELECT * FROM "NOME_COLUMNFAMILY";
+                OR                
+                SELECT JSON * FROM "NOME_COLUMNFAMILY";
+                ```
+            - Atualizar:
+                ```
+                UPDATE "NOME_COLUMNFAMILY" SET age=30 WHERE name='Edgar';
+                ```
+            - Remover:
+                ```
+                DELETE FROM  "NOME_COLUMNFAMILY" WHERE name='Edgar';
+                ```
+    - Key-Value (Redis)
+        - Comum cache, messageria e fila
+        - Comandos
+            - Inserir:
+                ```
+                SET user1:name "Edgar"
+                OR
+                SET user '{"name":"Edgar","age":29 }';
+                OR
+                SET user2:name "Edgar" EX 10 # Expira em 10sec
+                ```
+            - Inserir lista:
+                ```
+                LPUSH user1:name "Edgar"
+                ```
+            - Consultar:
+                ```
+                GET user1:name
+                ```
+            - Consultara lista:
+                ```
+                LRANGE user1:name 0 0
+                ```
+            - Validar existência:
+                ```
+                EXISTS user1:name
+                ```
+            - Descobrir type dos KEYS-VALUE:
+                ```
+                TYPE user1:name
+                ```
+            - Descobrir tempo de expiração:
+                ```
+                TTL user1:name # retorna sec
+                OR
+                PTTL user1:name # Retorna ms
+                ```
+            - Remover tempo de expiração:
+                ```
+                PERSIST user1:name 
+                ```
+            - Remover dados:
+                ```
+                DEL user1:name  
+                ```
+    - Documento (Mongodb)
+        - Conteúdo seguinte do documento
+#### :page_facing_up: **Aula - Schema Design**
+- IDE: Robo 3T
+- Schema Design
+    - Embedding:
+        - Pros:
+            - Consulta informações em uma única query
+            - Atualiza o registro em uma única operação
+        - Contras:
+            - Limite de 16MB por documento
+    - Referência:
+        - Pros:
+            - Documentos pequenos
+            - Não duplica informações
+            - **OBS:** Usado quando os dados não são acessados em todas as consulta
+        - Contras:
+            - Duas ou mais queries ou utilização do $lookup            
+#### :page_facing_up: **Aula - Boas práticas**                    
+- Boas Práticas
+    - Evite documentos muitos grandes
+    - Use nome campos objetivos e curtos
+    - Analise as suas queries utilizando explain()
+    - Atualize apenas os campos alterados
+    - Evite negações em queries
+    - Listas/Arrays dentro dos documentos não podem crescer sem limite
+#### :page_facing_up: **Aula - Operações de manipulação de dados** 
+- Comandos
+    - Listar bases:
+        ```
+        show databases;
+        ```
+    - Criar base:
+        ```
+        use "NOME_NOVA_BASE" # OBS: Caso já exista ele vai apenas utilizar
+        ```
+    - Criar collection:
+        ```
+        db.createCollection("NOME_COLLECTION", {copped: true, max: 2, size:2}); # Explicita
+        
+        db."NOME_COLLECTION".insertOne({"nome": "Edgar"}) # Implícita
+        ```
+    - Inserir:
+        ```
+        db."NOME_COLLECTION".insert({"nome": "Edgar"});
+        ```
+    - Consultar:
+        ```
+        db."NOME_COLLECTION".find({}); # Lista todo documento
+
+        db."NOME_COLLECTION".find({"name":"Edgar"}); # Filtra por nome
+
+        db."NOME_COLLECTION".find({}).limit(1); # Lista apenas a primeira ocorrência
+
+        db."NOME_COLLECTION".find({"name": {$in: ["Edgar","Silva"]}}); # Filtra múltiplas ocorrências
+
+        db."NOME_COLLECTION".find({$or: [{"name","Edgar"},{"age":41}]}); # Filtra múltiplas ocorrências em campos diferentes
+
+        db."NOME_COLLECTION".find({"age": {$lt: 55}}); # Filtra menor que
+
+        db."NOME_COLLECTION".find({"age": {$lte: 55}}); # Filtra menor ou igual que
+        ```
+    - Atualizar:
+        ```
+        db."NOME_COLLECTION".save({"_id" : ObjectiId("608734ascd98234r") , "name":"Edgar Reis"}); # Atualiza o documento por completo
+
+        db."NOME_COLLECTION".update({"name":"Edgar Reis"},{$set :{"name": "Edgar"}}); # Atualiza somente o valor do match
+
+        db."NOME_COLLECTION".updateMany({"name":"Edgar Reis"},{$set :{"name": "Edgar"}}); # Atualiza em massa o que der match
+        ```
+    - Remover:
+        ```
+        db."NOME_COLLECTION".deleteOne({"name": "Edgar"}) # Deleta somente a primeira ocorrência 
+
+        db."NOME_COLLECTION".deleteMany({"name": "Edgar"}) # Deleta em massa a ocorrência 
+        ```
+#### :page_facing_up: **Aula - Agregações**
+- Agregações
+    - É o procedimento de processar dados em uma ou mais etapas, onde o resultado de cada etapa é utilizado na etapa seguinte, de modo a retornar um resultado combinado.
+- Tipos de agregações
+    - **Proposito único**, não é possível aplicar customizações/filtros
+        - Count
+        - Distinct
+    - **Pipeline**, permitem as customizações das agregações 
+        - Groupy
+        - AddFields
+    - Funções
+        - $sum
+        - $avg
+        - $max
+        - $min
+    - Operadores Lógicos
+        - $and
+        - $or
+        - $not
+        - $nor

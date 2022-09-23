@@ -381,11 +381,11 @@
         ```
     - Inserir dados
         ```
-        INSERT INTO "NOME DA TABELA" ("CAMPOS","SEPARADOS","POR","VIRGULAS") VALUES ("VALORES","SEPARADOS","POR","VIRGULAS");
+        INSERT INTO "NOME DA TABELA" (CAMPOS,SEPARADOS,POR,VIRGULAS) VALUES ("VALORES","SEPARADOS","POR","VIRGULAS","ENTRE","ASPAS");
         ```
     - Consultar dados
         ```
-        SELECT * FROM "NOME DA TABELA";
+        SELECT * FROM "NOME DA TABELA SEM ASPAS";
         ```
 
 ### :bookmark_tabs: **Arquitetura de Banco de Dados**

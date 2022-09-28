@@ -1,0 +1,304 @@
+/* brERS skin V1.0 */
+
+body {
+    background-color: #F4F6FF !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.42857143;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {    
+    margin-top: 0;
+    position: fixed !important;
+    width: 100%;
+    z-index: 999;
+}
+
+nav {
+    background-color: #eaf7f5 !important;
+    border-bottom: 1px solid #d2d6d6 !important;
+}
+
+.navbar-brand {
+    color: #00b39b !important;
+    text-shadow: #00b39b 0 0 0.5px !important;
+
+}
+
+.icon-nav {
+    font-size: 20px;
+}
+
+.active {
+    color: #00b39b !important;
+    text-shadow: #00b39b 0 0 0.5px !important;
+}
+
+.main-content {
+    padding: 4rem 0.5rem 0 0.5rem ;
+}
+
+.browser {
+    font-size: 1.2rem;
+    padding: 0 0 0.8rem 1.5rem !important;
+}
+
+a {
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #000 !important;
+    text-shadow: #000 0 0 1px !important;
+}
+
+.icon-sec {
+    font-size: 1.0rem !important;
+    
+}
+
+.banner-home {
+    width: 100%;
+    height: 20rem;
+    max-height: 20rem;    
+    background: url("../img/home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.5);
+    box-shadow: #000 0 0 10px !important;
+    
+}
+
+.title-container {
+    position: relative;
+    margin-top: -20rem !important;
+    height: 100%;
+    max-height: 20rem;
+    z-index: 1;
+}
+
+.title {
+    padding: 5rem;
+    height: 20rem;
+    max-height: 20rem;
+    color: rgb(3, 3, 3);
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: #000 0 0 1px;
+}
+
+.subtitle {
+    color: #00b39b !important;
+    text-shadow: #00b39b 0 0 1px !important;
+    text-align: justify;
+}
+
+.card-row {
+    padding: 0.8rem;
+}
+
+.div-card {
+    padding: 0.5rem;
+}
+
+.card {
+    border-radius: 0 !important;  
+    height: 100% !important;
+    box-shadow: rgb(177, 175, 175) 0 0 10px !important;
+    text-align: justify;
+}
+
+.card-img-top {
+    border-radius: 0 !important;  
+
+}
+.card-title {
+    color: #00b39b !important;
+    text-shadow: #00b39b 0 0 0.5px !important;
+}
+
+.card-button {  
+    border-top: 0.01rem solid !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;    
+    border-color: rgb(201, 196, 196) !important;
+    background-color: #66e9d7 !important;
+}
+
+.card-button:hover {     
+    background-color: #00b39b !important;
+    color:#F4F6FF !important;
+}
+
+
+.icon-stage {
+    font-size: 4rem !important;
+    color: #00b39b !important;
+    text-shadow: #00b39b 0 0 0.5px !important;
+}
+
+.stage-title{
+    color: #00b39b !important;
+    text-shadow: #00b39b 0 0 0.5px !important;
+    padding: 1.0rem 0 0 1rem;
+    font-size: 1.2rem;
+}
+
+.stage-text{
+    padding: 0 0 0 1rem;
+    text-align: justify;
+}
+
+footer {
+    background-color: #eaf7f5 !important;
+}
+
+.ul-footer {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.li-title {    
+    color: #00b39b !important;
+}
+
+.icon-footer{
+    font-size: 1.5rem !important;
+    color: #00b39b !important;
+}
+
+.icon-social {
+    font-size: 2rem !important;
+    color: #000 !important;
+}
+
+.modal-title{
+    color: #00b39b !important;
+    text-shadow: #00b39b 0 0 0.5px !important;
+
+}
+
+.banner-contato {
+    width: 100%;
+    height: 20rem;
+    max-height: 20rem;    
+    background: url("../img/contato.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.5);
+    box-shadow: #000 0 0 10px !important;
+    
+}
+
+.form {
+    padding: 1rem;
+}
+
+.form-buttuns {
+    padding: 1rem;
+}
+
+.form-button {
+    background-color: #66e9d7 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: #000 0 0 1px !important;
+}
+
+.form-button:hover {
+    background-color: #00b39b !important;
+    color:#F4F6FF !important;
+}
+
+.map {
+    padding: 1rem;
+}
+
+.frame {
+    padding: 0.5rem;
+    height: 100% ;
+    width: 100% ;
+}
+
+.banner-sobre {
+    width: 100%;
+    height: 20rem;
+    max-height: 20rem;    
+    background: url("../img/sobre.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.5);
+    box-shadow: #000 0 0 10px !important;
+    
+}
+
+.sobre-subtitle {    
+    color: #00b39b !important;
+}
+
+.sobre-text {    
+    text-align: justify;
+}
+
+
+.banner-horario {
+    width: 100%;
+    height: 20rem;
+    max-height: 20rem;    
+    background: url("../img/horario.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.5);
+    box-shadow: #000 0 0 10px !important;
+    
+}
+
+.table {
+    padding: 1rem;
+}
+
+.paginate_button {
+    background-color: #66e9d7 !important;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #00b39b !important;
+}
+
+textarea:focus {
+    box-shadow: 0 0 5px #00b39b !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 0.5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #66e9d7;
+    border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #66e9d7;
+}

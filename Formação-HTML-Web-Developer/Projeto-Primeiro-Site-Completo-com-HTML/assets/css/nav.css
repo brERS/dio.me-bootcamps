@@ -99,6 +99,9 @@ a:hover {
     text-align: justify;
 }
 
+.msg-initial{
+    padding: 0.5rem !important;
+}
 .card-row {
     padding: 0.8rem;
 }
@@ -169,6 +172,7 @@ footer {
 
 .li-title {    
     color: #00b39b !important;
+    padding: 0.5rem;
 }
 
 .icon-footer{
@@ -245,10 +249,12 @@ footer {
 
 .sobre-subtitle {    
     color: #00b39b !important;
+    padding: 0.5rem;
 }
 
 .sobre-text {    
     text-align: justify;
+    padding: 0.5rem;
 }
 
 

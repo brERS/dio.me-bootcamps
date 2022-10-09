@@ -1,127 +1,901 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Wikipédia | Computadores </title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </head>
 
 <body>
-
-    <div>
-        <div class="logo">
-            <img src="assets/images/logo.png" width="100" />
+    <header class="header">
+        <div class="row">
+            <div class="col-4">
+                <button class="header-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+                    aria-controls="staticBackdrop">
+                    <i class="bi bi-list header-icon"></i>
+                </button>
+                <i class="bi bi-globe header-icon-two"></i>
+                <span class="header-title">Wikipédia</span>
+                <span class="header-subtitle">a enciclopédia livre</span>
+            </div>
+            <div class="col-4">
+                <div class="header-search-div">
+                    <form role="search" method="get" class="header-search-form" action="">
+                        <label class="header-search-label" for="header-search">
+                            <i class="bi bi-search"></i>
+                        </label>
+                        <input type="text" value="" placeholder="Pesquisar na Wikipédia" id="header-search" />
+                    </form>
+                </div>
+            </div>
+            <div class="col-4 header-user">
+                <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Edgar Reis
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-gear"></i>
+                            Gerenciar Conta
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="bar"></div>
-
-    <div class="content">
-        <div class="sidebar">
-            <h2>Computador</h2>
-            <ul>
-                <li><a href="#">Computador</a></li>
-            </ul>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="header">
+            <button class="header-button" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="bi bi-list header-icon"></i>
+            </button>
+            <i class="bi bi-globe header-icon-two"></i>
+            <span class="header-title"> Wikipédia</span>
+            <span class="header-subtitle"> a enciclopédia livre</span>
         </div>
-
-        <div class="main">
-            <p><b id="computador">Computador</b> é um conjunto de componentes eletrônicos máquina capaz de executar
-                variados tipos de
-                algoritmos e tratamento deinformações processamento de dados.
-            </p>
-            <p> Um computador pode possuir inúmeros atributos, dentre eles armazenamento de dados, processamento de
-                dados, cálculo em grande escala, desenho
-                industrial, tratamento de imagens gráficas, realidade virtual, entretenimento e cultura.
-            </p>
-            <p> No passado, o termo já foi aplicado a pessoas responsáveis por algum cálculo. Em geral, entende-se por
-                computador um sistema físico que realiza algum tipo de computação. Existe ainda o conceito matemático
-                rigoroso, utilizado na teoria da computação.
-            </p>
-            <p> Assumiu-se que os computadores pessoais e laptops são ícones da Era da Informação; e isto é o que
-                muitas pessoas consideram como "computador". Entretanto, atualmente as formas mais comuns de computador
-                em uso
-                são os sistemas embarcados, pequenos dispositivos usados para controlar outros dispositivos, como robôs,
-                câmeras digitais ou brinquedos.
-            </p>
-
-            <p><b id="cpu">Processamento</b>
-
-                O processador (ou CPU) é uma das partes principais do hardware do computador e é responsável pelos
-                cálculos, execução de tarefas e processamento de dados. A velocidade com que o computador executa as
-                tarefas ou processa dados está diretamente ligada à velocidade do processador. As primeiras CPUs eram
-                constituídas de vários componentes separados, mas desde meados da década de 1970 as CPUs vêm sendo
-                manufaturadas em um único circuito integrado, sendo então chamadas microprocessadores.
-            </p>
-            <p>
-                A unidade lógica e aritmética (ULA) é a unidade central do processador, que realmente executa as
-                operações aritméticas e lógicas entre dois números. Seus parâmetros incluem, além dos números operandos,
-                um resultado, um comando da unidade de controle, e o estado do comando após a operação. O conjunto de
-                operações aritméticas de uma ULA pode ser limitado a adição e subtração, mas também pode incluir
-                multiplicação, divisão, funções trigonométricas e raízes quadradas. Algumas podem operar somente com
-                números inteiros, enquanto outras suportam o uso de ponto flutuante para representar números reais
-                (apesar de possuírem precisão limitada).
-            </p>
-            <p>
-                A unidade de controle é a unidade do processador que armazena a posição de memória que contém a
-                instrução corrente que o computador está executando, informando à ULA qual operação a executar, buscando
-                a informação (da memória) que a ULA precisa para executá-la e transferindo o resultado de volta para o
-                local apropriado da memória. Feito isto, a unidade de controle vai para a próxima instrução (tipicamente
-                localizada na próxima posição da memória, a menos que a instrução seja uma instrução de desvio
-                informando que a próxima instrução está em outra posição.
-            </p>
-            <p>
-                A CPU também contém um conjunto restrito de células de memória chamadas registradores, que podem ser
-                lidas e escritas muito mais rapidamente que em outros dispositivos de memória. São usadas frequentemente
-                para evitar o acesso contínuo à memória principal cada vez que um dado é requisitado.
-            </p>
-
-            <p><b id="mem">Memória</b>
-                Ver artigo principal: Memória (computador)
-                A memória é um dispositivo que permite ao computador armazenar dados por certo tempo. Atualmente o termo
-                é geralmente usado para definir as memórias voláteis, como a RAM, mas seu conceito primordial também
-                aborda memórias não voláteis, como o disco rígido. Parte da memória do computador é feita no próprio
-                processador; o resto é diluído em componentes como a memória RAM, memória cache, disco rígido e leitores
-                de mídias removíveis, como disquete, CD e DVD.
-            </p>
-            <p>
-                Nos computadores modernos, cada posição da memória é configurado para armazenar grupos de oito bits
-                (chamado de um byte). Cada byte consegue representar 256 números diferentes; de 0 a 255 ou de -128 a
-                +127. Para armazenar números maiores pode-se usar diversos bytes consecutivos (geralmente dois, quatro
-                ou oito). Quando números negativos são armazenados, é utilizada a notação de complemento para dois.
-            </p>
-            <p>
-                A memória do computador é normalmente dividida entre primária e secundária, havendo também pesquisadores
-                que afirmam haver a memória "terciária".
-            </p>
-
-            <p><b id="os">Sistema operacional</b>
-                Um computador sempre precisa de no mínimo um programa em execução por todo o tempo para operar.
-                Tipicamente este programa é o sistema operacional (ou sistema operativo), que determina quais programas
-                vão executar, quando, e que recursos (como memória e E / S) ele poderá utilizar. O sistema operacional
-                também fornece uma camada de abstração sobre o hardware, e dá acesso aos outros programas fornecendo
-                serviços, como programas gerenciadores de dispositivos ("drivers") que permitem aos programadores
-                escreverem programas para diferentes máquinas sem a necessidade de conhecer especificidades de todos os
-                dispositivos eletrônicos de cada uma delas.
-            </p>
-
-        </div>
-
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#computador">Computador</a></li>
-                <li><a href="#cpu">Processamento</a></li>
-                <li><a href="#mem">Memória</a></li>
-                <li><a href="#os">Sistema operacional</a></li>
+        <div class="offcanvas-body">
+            <ul class="canvas-ul">
+                <li><a href="#"> Página principal </a></li>
+                <li><a href="#"> Conteúdo destacado </a></li>
+                <li><a href="#"> Eventos atuais </a></li>
+                <li><a href="#"> Esplanada </a></li>
+                <li><a href="#"> Página aleatória </a></li>
+                <li><a href="#"> Portais </a></li>
+                <li><a href="#"> Informar um erro </a></li>
+                <div class="canvas-span">
+                    <span> Colaboração </span>
+                </div>
+                <li><a href="#"> Boas-vindas </a></li>
+                <li><a href="#"> Ajuda </a></li>
+                <li><a href="#"> Página de testes </a></li>
+                <li><a href="#"> Portal comunitário </a></li>
+                <li><a href="#"> Mudanças recentes </a></li>
+                <li><a href="#"> Manutenção </a></li>
+                <li><a href="#"> Criar página </a></li>
+                <li><a href="#"> Páginas novas </a></li>
+                <li><a href="#"> Contato </a></li>
+                <li><a href="#"> Donativos </a></li>
+                <div class="canvas-span">
+                    <span> Ferramentas</span>
+                </div>
+                <li><a href="#"> Páginas afluentes </a></li>
+                <li><a href="#"> Alterações relacionadas </a></li>
+                <li><a href="#"> Carregar ficheiro </a></li>
+                <li><a href="#"> Páginas especiais </a></li>
+                <li><a href="#"> Hiperligação permanente </a></li>
+                <li><a href="#"> Informações da página </a></li>
+                <li><a href="#"> Citar esta página </a></li>
+                <li><a href="#"> Elemento Wikidata </a></li>
+                <li><a href="#"> Editar hiperligações interlínguas </a></li>
+                <div class="canvas-span">
+                    <span> Imprimir/exportar</span>
+                </div>
+                <li><a href="#"> Criar um livro </a></li>
+                <li><a href="#"> Descarregar como PDF </a></li>
+                <li><a href="#"> Versão para impressão </a></li>
+                <div class="canvas-span">
+                    <span> Noutros projetos</span>
+                </div>
+                <li><a href="#"> Wikimedia Commons </a></li>
+                <li><a href="#"> Wikiquote </a></li>
             </ul>
         </div>
     </div>
+    <main class="container-fluid">
+        <div class="row">
+            <header class="main-header">
+                <div class="row">
+                    <h4 class="col-6">Computadores</h4>
+                    <div class="col-6">
+                        <div class="theme">
+                            <button class="btn-theme" onclick="darkMode()"><i class="bi bi-circle-half"></i>
+                                Tema</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        Artigo
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Discussão</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fonte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Histórico</a>
+                </li>
+            </ul>
 
-    <div class="footer">
-        Desenvolvido por brERS - Exercícios do curso de HTML Web Developer
+            <section class="col-md-9 main-content">
+                <span class="main-origin">Origem: Wikipédia, a enciclopédia livre.
+                    <a type='button' class="main-origin-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="bi bi-file-lock"></i>
+                    </a>
+                </span>
+                <div class="contrib">
+                    <div class="col-md-8 offset-md-2 main-contrib">
+                        <div class="row main-contrib-row">
+                            <div class="col-md-1">
+                                <i class="bi bi-book-half"></i>
+                            </div>
+                            <div class="col-md-11 main-contrib-text">
+                                <p>
+                                    Esta página cita fontes, mas que não cobrem todo o conteúdo. Ajude a inserir
+                                    referências.Conteúdo não verificável pode ser removido.
+                                    —Encontre fontes: Google (notícias, livros e
+                                    acadêmico) (Setembro de 2013)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content-text">
+                    <section class="row col-12">
+                        <div class="col-9">
+                            <p><b id="computador">Computador</b> é um conjunto de componentes eletrônicos máquina capaz
+                                de executar variados tipos de algoritmos e tratamento deinformações processamento de
+                                dados.
+                            </p>
+                            <p> Um computador pode possuir inúmeros atributos, dentre eles armazenamento de dados,
+                                processamento de dados, cálculo em grande escala, desenho industrial, tratamento de
+                                imagens gráficas, realidade virtual, entretenimento e cultura.
+                            </p>
+                            <p> No passado, o termo já foi aplicado a pessoas responsáveis por algum cálculo. Em geral,
+                                entende-se por computador um sistema físico que realiza algum tipo de computação. Existe
+                                ainda o conceito matemático rigoroso, utilizado na teoria da computação.
+                            </p>
+                            <p> Assumiu-se que os computadores pessoais e laptops são ícones da Era da Informação; e
+                                isto é o que muitas pessoas consideram como "computador". Entretanto, atualmente as
+                                formas mais comuns de computador em uso são os sistemas embarcados, pequenos
+                                dispositivos usados para controlar outros dispositivos, como robôs, câmeras digitais ou
+                                brinquedos.
+                            </p>
+                        </div>
+                        <div class="col-3 slide-div">
+                            <div>
+                                <input type="radio" class="slide-controller" name="slide" checked />
+                                <input type="radio" class="slide-controller" name="slide" />
+                                <input type="radio" class="slide-controller" name="slide" />
+                                <input type="radio" class="slide-controller" name="slide" />
+
+                                <div class="slide-show">
+                                    <ul class="slides-list">
+                                        <li class="slide">
+                                            <img class="slide-img" src="assets/img/001.jpg" />
+                                        </li>
+                                        <li class="slide">
+                                            <img class="slide-img" src="assets/img/002.jpg" />
+                                        </li>
+                                        <li class="slide">
+                                            <img class="slide-img" src="assets/img/003.jpg" />
+                                        </li>
+                                        <li class="slide">
+                                            <img class="slide-img" src="assets/img/004.jpg" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="row col-12">
+                        <div class="col-9">
+                            <h4 class='subtitle' id="historia">História </h4>
+
+                            <p><b>As primeiras máquinas de computar</b></p>
+
+                            <p>
+                                John Napier (1550-1617), escocês inventor dos logaritmos, também inventou os ossos de
+                                Napier, que eram tabelas de multiplicação gravadas em bastão, o que evitava a
+                                memorização da tabuada.
+                            </p>
+
+                            <p>
+                                A primeira máquina computadora de verdade foi construída por Wilhelm Schickard sendo
+                                capazde somar, subtrair, multiplicar e dividir. Essa máquina foi perdida durante a
+                                guerra dos trinta anos, sendo que recentemente foi encontrada alguma documentação sobre
+                                ela. Durante muitos anos nada se soube sobre essa máquina, por isso, atribuía-se a
+                                Blaise Pascal (1623-1662) a construção da primeira máquina calculadora, que fazia apenas
+                                somas e subtrações.
+                            </p>
+                            <p>
+                                A máquina Pascal foi criada com objetivo de ajudar seu pai a computar os impostos em
+                                Rouen, França. O projeto de Pascal foi bastante aprimorado pelo matemático alemão
+                                Gottfried Wilhelm Leibniz (1646-1726), que também inventou o cálculo, o qual sonhou que,
+                                um dia no futuro, todo o raciocínio pudesse ser substituído pelo girar de uma simples
+                                alavanca.
+                            </p>
+                            <p>
+                                Todas essas máquinas, porém, estavam longe de ser um computador de uso geral, pois não
+                                eram programáveis. Isto quer dizer que a entrada era feita apenas de números, mas não de
+                                instruções a respeito do que fazer com os números.
+                            </p>
+                        </div>
+                        <div class="col-3 slide-div">
+                            <div>
+                                <img class="slide-img" src="assets/img/005.jpg" />
+                                <div class="img-text">
+                                    Pascaline, máquina calculadora feita por Blaise Pascal.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="row col-12">
+                        <div class="col-9">
+                            <h5>Babbage</h5>
+
+                            <p>
+                                Réplica (parte) do Calculador Diferencial criado por Charles Babbage.
+                            </p>
+                            <p>
+                                A origem da ideia de programar uma máquina vem da necessidade de que as máquinas de
+                                tecer
+                                produzissem padrões de cores diferentes. Assim, no século XVIII foi criada uma forma de
+                                representar os padrões em cartões de papel perfurado, que eram tratados manualmente. Em
+                                1801,
+                                Joseph Marie Jacquard (1752-1834) inventa um tear mecânico, com uma leitora automática
+                                de
+                                cartões.
+                            </p>
+                            <p>
+                                A ideia de Jacquard atravessou o Canal da Mancha, onde inspirou Charles Babbage
+                                (1792-1871), um
+                                professor de matemática de Cambridge, a desenvolver uma máquina de “tecer números”, uma
+                                máquina
+                                de calcular onde a forma de calcular pudesse ser controlada por cartões.
+                            </p>
+                            <p>
+                                Tudo começou com a tentativa de desenvolver uma máquina capaz de calcular polinômios por
+                                meio de
+                                diferenças, o calculador diferencial. Enquanto projetava seu calculador diferencial, a
+                                ideia de
+                                Jacquard fez com que Babbage imaginasse uma nova e mais complexa máquina, o calculador
+                                analítico, máquina com alguns elementos que remetem aos computadores atuais.
+                            </p>
+                            <p>
+                                Sua parte principal seria um conjunto de rodas dentadas, o moinho, formando uma máquina
+                                de somar
+                                com precisão de cinquenta dígitos. As instruções seriam lidas de cartões perfurados. Os
+                                cartões
+                                seriam lidos em um dispositivo de entrada e armazenados, para futuras referências, em um
+                                banco
+                                de mil registradores. Cada um dos registradores seria capaz de armazenar um número de
+                                cinquenta
+                                dígitos, que poderiam ser colocados lá por meio de cartões a partir do resultado de um
+                                dos
+                                cálculos do moinho.
+                            </p>
+                            <p>
+                                Além disso tudo, Babbage imaginou a primeira máquina de impressão, que imprimiria os
+                                resultados
+                                dos cálculos, contidos nos registradores. Babbage conseguiu, durante algum tempo, fundos
+                                para
+                                sua pesquisa, porém não conseguiu completar sua máquina no tempo prometido e não recebeu
+                                mais
+                                dinheiro. Hoje, partes de sua máquina podem ser vistas no Museu Britânico, que também
+                                construiu
+                                uma versão completa, utilizando as técnicas disponíveis na época.
+                            </p>
+                            <p>
+                                Junto com Babbage, trabalhou a jovem Ada Augusta, filha do poeta Lord Byron, conhecida
+                                como Lady
+                                Lovelace e Ada Lovelace. Ada foi a primeira programadora da história, projetando e
+                                explicando, a
+                                pedido de Babbage, programas para a máquina inexistente. Ada inventou os conceitos de
+                                subrotina,
+                                uma seqüência de instruções que pode ser usada várias vezes; de loop, uma instrução que
+                                permite
+                                a repetição de uma sequência de instruções, e do salto condicional, instrução que
+                                permite saltar
+                                para algum trecho do programa caso uma condição seja satisfeita.
+                            </p>
+                            <p>
+                                Ada Lovelace e Charles Babbage estavam avançados demais para o seu tempo, tanto que até
+                                a década
+                                de 1940, nada se inventou parecido com seu computador analítico. Até essa época foram
+                                construídas muitas máquinas mecânicas de somar destinadas a controlar negócios
+                                (principalmente
+                                caixas registradoras) e algumas máquinas inspiradas na calculadora diferencial de
+                                Babbage, para
+                                realizar cálculos de engenharia (que não alcançaram grande sucesso).
+                            </p>
+                        </div>
+                        <div class="col-3 slide-div">
+                            <div>
+                                <img class="slide-img" src="assets/img/006.jpg" />
+                                <div class="img-text">
+                                    Réplica (parte) do Calculador Diferencial criado por Charles Babbage.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="row col-12">
+                        <h5>A máquina de tabular</h5>
+                        <p>
+                            O próximo avanço dos computadores foi feito pelo americano Herman Hollerith (1860-1929), que
+                            inventou uma máquina capaz de processar dados baseada na separação de cartões perfurados
+                            (pelos seus furos). A máquina de Hollerith foi utilizada para auxiliar no censo de 1890,
+                            reduzindo o tempo de processamento de dados de sete anos, do censo anterior, para apenas
+                            dois anos e meio. Ela foi também pioneira ao utilizar a eletricidade na separação, contagem
+                            e tabulação dos cartões.
+                        </p>
+                        <p>
+                            A empresa fundada por Hollerith é hoje conhecida como International Business Machines, ou
+                            IBM.
+                        </p>
+                    </section>
+                    <section class="row col-12">
+                        <div class="col-9">
+                            <h5>Os primeiros computadores de uso geral</h5>
+
+                            <p>
+                                O primeiro computador
+                                eletromecânico foi construído por Konrad Zuse (1910–1995). Em 1936, esse engenheiro
+                                alemão construiu, a partir de relês que executavam os cálculos e dados lidos em fitas
+                                perfuradas, o Z1. Zuse tentou vender o computador ao governo alemão, que desprezou a
+                                oferta, já que não poderia auxiliar no esforço de guerra. Os projetos de Zuse ficariam
+                                parados durante a guerra, dando a chance aos americanos de desenvolver seus
+                                computadores.
+                            </p>
+                            <p>
+                                Foi na Segunda Guerra Mundial que realmente nasceram os computadores atuais. A Marinha
+                                dos Estados Unidos, em conjunto com a Universidade de Harvard, desenvolveu o computador
+                                Harvard Mark I, projetado pelo professor Howard Aiken, com base no calculador analítico
+                                de Babbage. O Mark I ocupava 120 m³ aproximadamente, conseguindo multiplicar dois
+                                números de dez dígitos em três segundos. Simultaneamente, e em segredo, o Exército dos
+                                Estados Unidos desenvolvia um projeto semelhante, chefiado pelos engenheiros J. Presper
+                                Eckert e John Mauchly, cujo resultado foi o primeiro computador a válvulas, o Eletronic
+                                Numeric Integrator And Calculator (ENIAC),[4] capaz de fazer quinhentas multiplicações
+                                por segundo. Tendo sido projetado para calcular trajetórias balísticas, o ENIAC foi
+                                mantido em segredo pelo governo americano até o final da guerra, quando foi anunciado ao
+                                mundo.
+                            </p>
+                            <p>
+                                No ENIAC, o programa
+                                era feito rearranjando a fiação em um painel. Nesse ponto John von Neumann propôs a
+                                ideia que transformou os calculadores eletrônicos em “cérebros eletrônicos”: modelar a
+                                arquitetura do computador segundo o sistema nervoso central. Para isso, eles teriam que
+                                ter três características:
+                            </p>
+                            <p>
+                                Codificar as instruções de uma forma possível de ser armazenada na memória do
+                                computador. Von Neumann sugeriu que fossem usados uns e zeros. Armazenar as instruções
+                                na memória, bem como toda e qualquer informação necessária a execução da tarefa, e
+                                Quando processar o programa, buscar as instruções diretamente na memória, ao invés de
+                                lerem um novo cartão perfurado a cada passo.
+                            </p>
+                            <p>
+                                Visão simplificada da arquitetura de Von Neumann Este é o conceito de programa
+                                armazenado, cujas principais vantagens são: rapidez, versatilidade e automodificação.
+                                Assim, o computador programável que conhecemos hoje, onde o programa e os dados estão
+                                armazenados na memória ficou conhecido como Arquitetura de von Neumann.
+                            </p>
+                            <p>
+                                Para divulgar essa ideia, von Neumann publicou sozinho um artigo. Eckert e Mauchy não
+                                ficaram muito contentes com isso, pois teriam discutido muitas vezes com ele. O projeto
+                                ENIAC acabou se dissolvendo em uma chuva de processos, mas já estava criado o computador
+                                moderno.
+                            </p>
+                        </div>
+                        <div class="col-3 slide-div">
+                            <div>
+                                <img class="slide-img" src="assets/img/007.jpg" />
+                                <div class="img-text">
+                                    Z1, computador eletromecânico construído por Konrad Zuse.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="row col-12">
+                        <h4 class='subtitle' id="hardware">Arquitetura de hardware</h4>
+
+                        <p>
+                            Mesmo que a tecnologia utilizada nos computadores digitais tenha mudado dramaticamente
+                            desde os primeiros computadores da década de 1940 (veja história do hardware), quase
+                            todos os computadores atuais ainda utilizam a arquitetura de von Neumann proposta por
+                            John von Neumann.
+                        </p>
+                        <p>
+                            Seguindo a arquitetura, os computadores possuem quatro sessões principais, a unidade
+                            lógica e aritmética, a unidade de controle, a memória e os dispositivos de entrada e
+                            saída. Essas partes são interconectadas por barramentos. A unidade lógica e aritmética,
+                            a unidade de controle, os registradores e a parte básica de entrada e saída são
+                            conhecidos como a CPU.
+                        </p>
+                        <p>
+                            Alguns computadores maiores diferem do modelo acima em um aspecto principal - eles têm
+                            múltiplas CPUs trabalhando simultaneamente. Adicionalmente, poucos computadores,
+                            utilizados principalmente para pesquisa e computação científica, têm diferenças
+                            significativas do modelo acima, mas eles não tem grande aplicação comercial.
+                        </p>
+                        <h5>Processamento</h5>
+                        <p>
+                            Ver artigo principal: Processamento O processador (ou CPU) é uma das partes principais
+                            do hardware do computador e é responsável pelos cálculos, execução de tarefas e
+                            processamento de dados. A velocidade com que o computador executa as tarefas ou processa
+                            dados está diretamente ligada à velocidade do processador. As primeiras CPUs eram
+                            constituídas de vários componentes separados, mas desde meados da década de 1970 as CPUs
+                            vêm sendo manufaturadas em um único circuito integrado, sendo então chamadas
+                            microprocessadores.
+                        </p>
+                        <p>
+                            A unidade lógica e aritmética (ULA) é a unidade central do processador, que realmente
+                            executa as operações aritméticas e lógicas entre dois números. Seus parâmetros incluem,
+                            além dos números operandos, um resultado, um comando da unidade de controle, e o estado
+                            do comando após a operação. O conjunto de operações aritméticas de uma ULA pode ser
+                            limitado a adição e subtração, mas também pode incluir multiplicação, divisão, funções
+                            trigonométricas e raízes quadradas. Algumas podem operar somente com números inteiros,
+                            enquanto outras suportam o uso de ponto flutuante para representar números reais (apesar
+                            de possuírem precisão limitada).
+                        </p>
+                        <p>
+                            A unidade de controle é a unidade do processador que armazena a posição de memória que
+                            contém a instrução corrente que o computador está executando, informando à ULA qual
+                            operação a executar, buscando a informação (da memória) que a ULA precisa para
+                            executá-la e transferindo o resultado de volta para o local apropriado da memória. Feito
+                            isto, a unidade de controle vai para a próxima instrução (tipicamente localizada na
+                            próxima posição da memória, a menos que a instrução seja uma instrução de desvio
+                            informando que a próxima instrução está em outra posição.
+                        </p>
+                        <p>
+                            A CPU também contém um conjunto restrito de células de memória chamadas registradores,
+                            que podem ser lidas e escritas muito mais rapidamente que em outros dispositivos de
+                            memória. São usadas frequentemente para evitar o acesso contínuo à memória principal
+                            cada vez que um dado é requisitado.
+                        </p>
+                        <h5>Memória</h5>
+                        <p>
+                            Ver artigo principal: Memória (computador) A memória é um dispositivo que permite ao
+                            computador armazenar dados por certo tempo. Atualmente o termo é geralmente usado para
+                            definir as memórias voláteis, como a RAM, mas seu conceito primordial também aborda
+                            memórias não voláteis, como o disco rígido. Parte da memória do computador é feita no
+                            próprio processador; o resto é diluído em componentes como a memória RAM, memória cache,
+                            disco rígido e leitores de mídias removíveis, como disquete, CD e DVD.
+                        </p>
+                        <p>
+                            Nos computadores modernos, cada posição da memória é configurado para armazenar grupos
+                            de oito bits (chamado de um byte). Cada byte consegue representar 256 números
+                            diferentes; de 0 a 255 ou de -128 a +127. Para armazenar números maiores pode-se usar
+                            diversos bytes consecutivos (geralmente dois, quatro ou oito). Quando números negativos
+                            são armazenados, é utilizada a notação de complemento para dois.
+                        </p>
+                        <p>
+                            A memória do computador é normalmente dividida entre primária e secundária, havendo
+                            também pesquisadores que afirmam haver a memória "terciária".
+                        </p>
+                        <h5>Memória primária</h5>
+                        <p>
+                            Ver artigos principais: Memória RAM e Memória ROM A memória primária é aquela acessada
+                            diretamente pela Unidade Lógica e Aritmética. Tradicionalmente essa memória pode ser de
+                            leitura e escrita (RAM) ou só de leitura (ROM). Atualmente existem memórias que podem
+                            ser classificadas como preferencialmente de leitura, isso é, variações da memória ROM
+                            que podem ser regravadas, porém com um número limitado de ciclos e um tempo muito mais
+                            alto.
+                        </p>
+                        <p>
+                            Normalmente a memória primária se comunica com a ULA por meio de um barramento ou canal
+                            de dados. A velocidade de acesso a memória é um fator importante de custo de um
+                            computador, por isso a memória primária é normalmente construída de forma hierárquica em
+                            um projeto de computador. Parte da memória, conhecida como cache fica muito próxima à
+                            ULA, com acesso muito rápido. A maior parte da memória é acessada por meio de vias
+                            auxiliares.
+                        </p>
+                        <p>
+                            Normalmente a memória é nitidamente separada da ULA em uma arquitetura de computador.
+                            Porém, os microprocessadores atuais possuem memória cache incorporada, o que aumenta em
+                            muito sua velocidade.
+                        </p>
+                        <h5>Memória RAM</h5>
+                        <p>
+                            A <b>Memória RAM </b> (Random Access Memory) é uma sequência de células numeradas, cada
+                            uma contendo uma pequena quantidade de informação. A informação pode ser uma instrução
+                            para dizer ao computador o que fazer. As células podem conter também dados que o
+                            computador precisa para realizar uma instrução. Qualquer célula pode conter instrução ou
+                            dado, assim o que em algum momento armazenava dados pode armazenar instruções em outro
+                            momento. Em geral, o conteúdo de uma célula de memória pode ser alterado a qualquer
+                            momento, a memória RAM é um rascunho e não um bloco de pedra.
+                        </p>
+                        <p>
+                            As memórias RAM são denominadas genericamente de DRAM (RAM dinâmica) pelo fato de
+                            possuírem uma característica chamada refrescamento de memória, que tem a finalidade de
+                            regravar os dados armazenados em intervalos regulares de tempo, o que é necessário para
+                            a manutenção de seu conteúdo. O tamanho de cada célula, e o número de células, varia de
+                            computador para computador, e as tecnologias utilizadas para implementar a memória RAM
+                            variam bastante. Atualmente o mais comum é a implementação em circuitos integrados.
+                        </p>
+                        <h5>Memória ROM</h5>
+                        <p>
+                            A memória ROM (Read-Only Memory) é aquela que só pode ser lida e os dados não são
+                            perdidos com o desligamento do computador. A diferença entre a memória RAM e a ROM é que
+                            a RAM aceita gravação, regravação e perda de dados. Mesmo se for enviada uma informação
+                            para ser gravada na memória ROM, o procedimento não é executado (esta característica
+                            praticamente elimina a criação de vírus que afetam a ROM).
+                        </p>
+                        <p>
+                            Um software gravado na ROM recebe o nome de firmware. Em computadores da linha IBM-PC
+                            eles são basicamente três, que são acessados toda vez que ligamos o computador, a saber:
+                            BIOS, POST e SETUP.
+                        </p>
+                        <p>
+                            Existe uma variação da ROM chamada memória preferencialmente de leitura que permite a
+                            re-gravação de dados. São as chamadas EPROM (Erasable Programmable Read Only Memory) ou
+                            EEPROM (Electrically Erasable Programmable Read-Only Memory).
+                        </p> <b>Memória secundária</b>
+                        <p>
+                            A memória secundária ou memória de massa é usada para gravar grande quantidade de dados,
+                            que não são perdidos com o desligamento do computador, por um período longo de tempo.
+                            Exemplos de memória de massa incluem o disco rígido e mídias removíveis como o CD-ROM, o
+                            DVD, o disquete e o pen drive.
+                        </p>
+                        <p>
+                            Normalmente a memória secundária não é acessada diretamente pela ULA, mas sim por meio
+                            dos dispositivos de entrada e saída. Isso faz com que o acesso a essa memória seja muito
+                            mais lento do que o acesso a memória primária. Para isso cada dispositivo encontra-se
+                            com um buffer de escrita e leitura para melhoramento de desempenho.
+                        </p>
+                        <p>
+                            Supostamente, consideramos que a memória terciária está permanentemente ligada ao
+                            computador.
+                        </p>
+                        <h5>Memória terciária</h5>
+                        <p>
+                            Fita magnética para gravação de dados Sistemas mais complexos de computação podem
+                            incluir um terceiro nível de memória, com acesso ainda mais lento que o da memória
+                            secundária. Um exemplo seria um sistema automatizado de fitas contendo a informação
+                            necessária. A memória terciária pode ser considerada um dispositivo de memória
+                            secundária ou memória de massa colocado para servir um dispositivo de memória
+                            secundária.
+                        </p>
+                        <p>
+                            As tecnologias de memória usam materiais e processos bastante variados. Na informática,
+                            elas têm evoluído sempre em direção de uma maior capacidade de armazenamento, maior
+                            miniaturização, maior rapidez de acesso e confiabilidade, enquanto seu custo cai
+                            constantemente.
+                        </p>
+                        <p>
+                            Entretanto, a memória de um computador não se limita a sua memoria individual e física,
+                            ela se apresenta de maneira mais ampla, e sem lugar definido (desterritorializada).
+                            Temos possibilidades de armazenar em diversos lugares na rede, podemos estar em Cairo e
+                            acessar arquivos que foram armazenados em sítios no Brasil.
+                        </p>
+                        <p>
+                            É crescente a tendência para o armazenamento das informações na memória do espaço
+                            virtual, ou o chamado ciberespaço, através de discos virtuais e anexos de e-mails. Isto
+                            torna possível o acesso a informação a partir de qualquer dispositivo conectado à
+                            Internet.
+                        </p>
+                        <h5>Entrada e saída</h5>
+                        <p>
+                            Ver artigo principal: E/S
+                        </p>
+                        <p>
+                            Mouse Os dispositivos de entrada e saída (E/S) são periféricos usados para a interação
+                            homem-computador. Nos computadores pessoais modernos, dispositivos comuns de entrada
+                            incluem o mouse (ou rato), o teclado, o digitalizador e a webcam. Dispositivos comuns de
+                            saída incluem a caixa de som, o monitor[5] e a impressora.
+                        </p>
+                        <p>
+                            O que todos os dispositivos de entrada têm em comum é que eles precisam codificar
+                            (converter) a informação de algum tipo em dados que podem ser processados pelo sistema
+                            digital do computador. Dispositivos de saída por outro lado, descodificam os dados em
+                            informação que é entendida pelo usuário do computador. Neste sentido, um sistema de
+                            computadores digital é um exemplo de um sistema de processamento de dados.
+                        </p>
+                        <p>
+                            Processo este, que consiste basicamente em três fases: Entrada, Processamento e Saída.
+                            Entendemos por entrada todo o procedimento de alimentação de informações, que por sua
+                            vez serão processadas (fase de processamento) e após isso, são repassadas as respostas
+                            ao usuário (saída).
+                        </p>
+                        <p>
+                            Podemos ter dispositivos que funcionam tanto para entrada como para saída de dados, como
+                            o modem e o drive de disquete. Atualmente, outro dispositivo híbrido de dados é a rede
+                            de computadores.
+                        </p>
+                        <h5>Barramentos</h5>
+                        <p>
+                            Para interligar todos esses dispositivos existe uma placa de suporte especial, a
+                            placa-mãe, que através de barramentos, fios e soquetes conecta todos os dispositivos.
+                            Sua função inclui também a conexão de placas auxiliares que subcontrolam os periféricos
+                            de entrada e saída, como a placa de som (conecta-se com a caixa de som), a placa de
+                            vídeo (conecta-se com o monitor), placa de rede (conecta-se com a LAN) e o fax-modem
+                            (conecta-se com a linha telefônica).
+                        </p>
+                        <p>
+                            Nota-se que o barramento entre os componentes não constitui uma conexão ponto a ponto;
+                            ele pode conectar logicamente diversos componentes utilizando o mesmo conjunto de fios.
+                            O barramento pode utilizar uma interface serial ou uma interface paralela.
+                        </p>
+                        <p>
+                            Outros equipamentos adicionais usados em conjunto com a placa-mãe são o dissipador, um
+                            pequeno ventilador para resfriar o processador, e a fonte de energia, responsável pela
+                            alimentação de energia de todos os componentes do computador.
+                        </p>
+                    </section>
+                    <section class="row col-12">
+                        <h4 class='subtitle' id="software">Arquitetura de software</h4>
+                        <b>Instruções</b>
+                        <p>
+                            A principal característica dos computadores modernos, o que o distingue de outras máquinas,
+                            é que pode ser programado. Isto significa que uma lista de instruções pode ser armazenada na
+                            memória e executadas posteriormente.
+                        </p>
+                        <p>
+                            Diagrama de linguagem de programação compilada em linguagem de máquina. As instruções
+                            executadas na ULA discutidas acima não são um rico conjunto de instruções como a linguagem
+                            humana. O computador tem apenas um limitado número de instruções bem definidas. Um exemplo
+                            típico de uma instrução existente na maioria dos computadores é "copie o conteúdo da posição
+                            de memória 123 para a posição de memória 456", "adicione o conteúdo da posição de memória
+                            510 ao conteúdo da posição 511 e coloque o resultado na posição 507" e "se o conteúdo da
+                            posição 012 é igual a 0, a próxima instrução está na posição 678".
+                        </p>
+                        <p>
+                            Instruções são representadas no computador como números - o código para "copiar" poderia ser
+                            007, por exemplo. O conjunto particular de instruções que um computador possui é conhecido
+                            como a linguagem de máquina do computador. Na prática, as pessoas não escrevem instruções
+                            diretamente na linguagem de máquina mas em uma linguagem de programação, que é
+                            posteriormente traduzida na linguagem de máquina através de programas especiais, como
+                            interpretadores e compiladores. Algumas linguagens de programação se aproximam bastante da
+                            linguagem de máquina, como o assembly (linguagem de baixo nível); por outro lado linguagens
+                            como o Prolog são baseadas em princípios abstratos e se distanciam bastante dos detalhes da
+                            operação da máquina (linguagens de alto nível).
+                        </p>
+                        <p>
+                            A execução das instruções é tal como ler um livro. Apesar da pessoa normalmente ler cada
+                            palavra e linha em sequência, é possível que algumas vezes ela volte para pontos anteriores
+                            do texto de interesse ou passe sessões não interessantes. Da mesma forma, um computador que
+                            segue a arquitetura de von Neumann executa cada instrução de forma sequencial, da maneira
+                            como foram armazenadas na memória. Mas, através de instruções especiais, o computador pode
+                            repetir instruções ou avançá-las até que alguma condição seja satisfeita. Isso é chamado
+                            controle do fluxo e é o que permite que o computador realize tarefas repetitivamente sem
+                            intervenção humana.
+                        </p>
+                        <p>
+                            Uma pessoa usando uma calculadora pode realizar operações aritméticas como somar número
+                            apertando poucos botões. Mas somar sequencialmente os números de um a mil iria requerer
+                            apertar milhares de vezes os botões, com uma alta probabilidade de erro em alguma iteração.
+                            Por outro lado, computadores podem ser programados para realizar tal tarefa com poucas
+                            instruções, e a execução e extremamente rápida.
+                        </p>
+                        <p>
+                            Mas os computadores não conseguem pensar, eles somente executam as instruções que
+                            fornecemos. Um humano instruído, ao enfrentar o problema da adição explicado anteriormente,
+                            perceberia em algum momento que pode reduzir o problema usando a seguinte equação:
+                        </p>
+                        <p>
+                            {\displaystyle 1+2+3+...+n={{n(n+1)} \over 2}}1+2+3+...+n={{n(n+1)} \over 2}, e chegar na
+                            mesma resposta correta com pouco trabalho. Alguns computadores modernos conseguem tomar
+                            algumas decisões para acelerar a execução dos programas ao prever instruções futuras e
+                            reorganizar a ordem de instruções sem modificar seu significado. Entretanto, os computadores
+                            ainda não conseguem determinar instintivamente uma maneira mais eficiente de realizar sua
+                            tarefa, pois não possuem conhecimento para tal.[6]
+                        </p>
+                        <h5>Programas</h5>
+                        <p>
+                            Ver artigo principal: Programa de computador Programas são simplesmente grandes listas de
+                            instruções para o computador executar, tais com tabelas de dados. Muitos programas de
+                            computador contêm milhões de instruções, e muitas destas instruções são executadas
+                            repetidamente. Um computador pessoal típico (no ano de 2003) podia executar cerca de dois a
+                            três bilhões de instruções por segundo. Os computadores não têm a sua extraordinária
+                            capacidade devido a um conjunto de instruções complexo. Apesar de existirem diferenças de
+                            projeto com CPU com um maior número de instruções e mais complexas, os computadores executam
+                            milhões de instruções simples combinadas, escritas por bons "programadores". Estas
+                            instruções combinadas são escritas para realizar tarefas comuns como, por exemplo, desenhar
+                            um ponto na tela. Tais instruções podem então ser utilizadas por outros programadores.
+                        </p>
+                        <p>
+                            Hoje em dia, muitos computadores aparentam executar vários programas ao mesmo tempo, o que é
+                            normalmente conhecido como multitarefa. Na realidade, a CPU executa as instruções de um
+                            programa por um curto período de tempo e, em seguida, troca para um outro programa e executa
+                            algumas de suas instruções. Isto cria a ilusão de vários programas sendo executados
+                            simultaneamente através do compartilhamento do tempo da CPU entre os programas. Este
+                            compartilhamento de tempo é normalmente controlado pelo sistema operacional. Nos casos em
+                            que o computador possui dois núcleos de processamento, cada núcleo processa informações de
+                            um programa, diminuindo assim o tempo de processamento.
+                        </p>
+                        <h5>Sistema operacional</h5>
+                        <p>
+                            Ver artigo principal: Sistema operacional Um computador sempre precisa de no mínimo um
+                            programa em execução por todo o tempo para operar. Tipicamente este programa é o sistema
+                            operacional (ou sistema operativo), que determina quais programas vão executar, quando, e
+                            que recursos (como memória e E / S) ele poderá utilizar. O sistema operacional também
+                            fornece uma camada de abstração sobre o hardware, e dá acesso aos outros programas
+                            fornecendo serviços, como programas gerenciadores de dispositivos ("drivers") que permitem
+                            aos programadores escreverem programas para diferentes máquinas sem a necessidade de
+                            conhecer especificidades de todos os dispositivos eletrônicos de cada uma delas.
+                        </p>
+                    </section>
+                    <section class="row col-12">
+
+                        <div class="col-9">
+                            <h4 class='subtitle' id="impacto">Impactos do computador na sociedade</h4>
+
+                            <p>
+                                Segundo Pierre Lévy, no livro "Cibercultura", o computador não é mais um centro, e sim
+                                um nó, um
+                                terminal, um componente da rede universal calculante. Em certo sentido, há apenas um
+                                único
+                                computador, mas é impossível traçar seus limites, definir seu contorno. É um computador
+                                cujo
+                                centro está em toda parte e a circunferência em lugar algum, um computador hipertextual,
+                                disperso, vivo, fervilhante, inacabado: o ciberespaço em si.
+                            </p>
+                            <p>
+                                O computador evoluiu em sua capacidade de armazenamento de informações, que é cada vez
+                                maior, o
+                                que possibilita a todos um acesso cada vez maior a informação. Isto significa que o
+                                computador
+                                agora representa apenas um ponto de um novo espaço, o ciberespaço. Essas informações
+                                contidas em
+                                computadores de todo mundo e presentes no ciberespaço, possibilitam aos usuários um
+                                acesso a
+                                novos mundos, novas culturas, sem a locomoção física. Com todo este armazenamento de
+                                textos,
+                                imagens, dados, etc..
+                            </p>
+                            <p>
+                                Houve também uma grande mudança no comportamento empresarial, com uma forte redução de
+                                custo e
+                                uma descompartimentalização das mesmas. Antes o que era obstante agora é próximo, as
+                                máquinas,
+                                componentes do ciberespaço, com seus compartimentos de saída, otimizaram o tempo e os
+                                custos.
+                            </p>
+                        </div>
+                        <div class="col-3 slide-div">
+                            <div>
+                                <img class="slide-img" src="assets/img/008.jpg" />
+                                <div class="img-text">
+                                    Visualização gráfica de várias rotas em uma porção da Internet mostrando a
+                                    escalabilidade da rede.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="row col-12">
+                        <h4 class='subtitle' id="class">Classificação dos computadores</h4>
+                        <p> Computadores podem ser classificados de acordo com a função que exercem ou pelas suas
+                            dimensões (capacidade de processamento). A capacidade de processamento é medida em Flops.
+                        </p>
+
+                        <b>Quanto à Capacidade de Processamento</b>
+                        <p> Microcomputador - Também chamado Computador pessoal ou ainda Computador doméstico. Segundo a
+                            Lista Top 10 Flops, chegam atualmente aos 107,58 GFlops[7] (Core i7 980x da Intel).
+                        </p>
+                        <p> Console ou videogame - Ao mesmo tempo função e capacidade. Não chega a ser um computador
+                            propriamente dito, mas os atuais PlayStation 3 e Xbox 360 alcançam 218 e 115 GFlops
+                            respectivamente.
+                        </p>
+                        <p> Mainframe - Um computador maior em tamanho e mais poderoso. Segundo a Lista Top500 de
+                            jun/2010, ficam na casa dos TFlops (de 20 a 80 TFlops), recebendo o nome comercial de
+                            servidores (naquela lista), que na verdade é a função para a qual foram fabricados e não sua
+                            capacidade, que é de mainframe.
+                        </p>
+                        <p> Supercomputador - Muito maior em dimensões, pesando algumas toneladas e capaz de, em alguns
+                            casos, efetuar cálculos que levariam 100 anos para serem calculados em um microcomputador.
+                            Seu desempenho ultrapassa 80 TFlops, chegando a 1 750 TFlops (1,75 PFlops).[8]
+                        </p>
+
+                        <b>Quanto às suas Funções</b>
+                        <p>
+                            Console ou videogame - Como dito não são computadores propriamente ditos, mas atualmente
+                            conseguem realizar muitas, senão quase todas, as funções dos computadores pessoais.
+                        </p>
+                        <p> Servidor (server) - Um computador que serve uma rede de computadores. São de diversos tipos.
+                            Tanto microcomputadores quanto mainframes são usados como servidores.</p>
+                        <p> Estação de trabalho (workstation) - Serve um único usuário e tende a possuir hardware e
+                            software não encontráveis em computadores pessoais, embora externamente se pareçam muito com
+                            os computadores pessoais. Tanto microcomputadores quanto mainframes são usados como estações
+                            de trabalho.
+                        </p>
+                        <p> Sistema embarcado, computador dedicado ou computador integrado (embedded computer) - De
+                            menores proporções, é parte integrante de uma máquina ou dispositivo.
+                        </p>
+                        <p> Por exemplo uma unidade de comando da injeção eletrônica de um automóvel, que é específica
+                            para atuar no gerenciamento eletrônico do sistema de injeção de combustível e ignição. Eles
+                            são chamados de dedicados pois executam apenas a tarefa para a qual foram programados.
+                            Tendem a ter baixa capacidade de processamento, às vezes inferior aos microcomputadores.
+                        </p>
+                    </section>
+                </div>
+            </section>
+            <aside class="col-md-3 main-aside">
+                <h4 class="main-aside-title">Neste Artigo</h4>
+                <ul class="main-aside-ul">
+                    <li>- <a href="#">Início</a></li>
+                    <li>- <a href="#historia">História</a></li>
+                    <li>- <a href="#hardware">Arquitetura de hardware</a></li>
+                    <li>- <a href="#software">Arquitetura de software</a></li>
+                    <li>- <a href="#impacto">Impactos do computador na sociedade</a></li>
+                    <li>- <a href="#class">Classificação dos computadores</a></li>
+                </ul>
+            </aside>
+            <button onclick="topFunction()" id="myBtn">
+                <i class="bi bi-chevron-double-up"></i>
+            </button>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="btn-modal">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="bi bi-exclamation-octagon"></i>
+                    </div>
+                    <br />
+                    <p class="msg-modal-body"> Esta página só pode ser editada por usuários com contas autoconfirmadas.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

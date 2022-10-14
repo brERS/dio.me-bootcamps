@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script>
         function darkMode() {
             var element = document.body;
@@ -46,12 +46,11 @@
             </div>
             <div class="col-4">
                 <div class="header-search-div">
-                    <form role="search" method="get" class="header-search-form" action="">
+                    <a class="header-search-form" data-bs-toggle="modal" data-bs-target="#searchModal">
                         <label class="header-search-label" for="header-search">
                             <i class="bi bi-search"></i>
                         </label>
-                        <input type="text" value="" placeholder="Pesquisar na Wikipédia" id="header-search" />
-                    </form>
+                    </a>
                 </div>
             </div>
             <div class="col-4 header-user">
@@ -194,7 +193,7 @@
                 </div>
                 <div class="main-content-text">
                     <section class="row col-12">
-                        <div class="col-9">
+                        <div class="col-md-9">
                             <p><b id="computador">Computador</b> é um conjunto de componentes eletrônicos máquina capaz
                                 de executar variados tipos de algoritmos e tratamento deinformações processamento de
                                 dados.
@@ -214,7 +213,7 @@
                                 brinquedos.
                             </p>
                         </div>
-                        <div class="col-3 slide-div">
+                        <div class="col-md-3 slide-div">
                             <div>
                                 <input type="radio" class="slide-controller" name="slide" checked />
                                 <input type="radio" class="slide-controller" name="slide" />
@@ -241,7 +240,7 @@
                         </div>
                     </section>
                     <section class="row col-12">
-                        <div class="col-9">
+                        <div class="col-md-9">
                             <h4 class='subtitle' id="historia">História </h4>
 
                             <p><b>As primeiras máquinas de computar</b></p>
@@ -273,7 +272,7 @@
                                 instruções a respeito do que fazer com os números.
                             </p>
                         </div>
-                        <div class="col-3 slide-div">
+                        <div class="col-md-3 slide-div">
                             <div>
                                 <img class="slide-img" src="assets/img/005.jpg" />
                                 <div class="img-text">
@@ -283,8 +282,8 @@
                         </div>
                     </section>
                     <section class="row col-12">
-                        <div class="col-9">
-                            <h5>Babbage</h5>
+                        <div class="col-md-9">
+                            <h5 class="subtitle">Babbage</h5>
 
                             <p>
                                 Réplica (parte) do Calculador Diferencial criado por Charles Babbage.
@@ -362,7 +361,7 @@
                                 realizar cálculos de engenharia (que não alcançaram grande sucesso).
                             </p>
                         </div>
-                        <div class="col-3 slide-div">
+                        <div class="col-md-3 slide-div">
                             <div>
                                 <img class="slide-img" src="assets/img/006.jpg" />
                                 <div class="img-text">
@@ -372,7 +371,7 @@
                         </div>
                     </section>
                     <section class="row col-12">
-                        <h5>A máquina de tabular</h5>
+                        <h5 class="subtitle">A máquina de tabular</h5>
                         <p>
                             O próximo avanço dos computadores foi feito pelo americano Herman Hollerith (1860-1929), que
                             inventou uma máquina capaz de processar dados baseada na separação de cartões perfurados
@@ -387,8 +386,8 @@
                         </p>
                     </section>
                     <section class="row col-12">
-                        <div class="col-9">
-                            <h5>Os primeiros computadores de uso geral</h5>
+                        <div class="col-md-9">
+                            <h5 class="subtitle">Os primeiros computadores de uso geral</h5>
 
                             <p>
                                 O primeiro computador
@@ -439,7 +438,7 @@
                                 moderno.
                             </p>
                         </div>
-                        <div class="col-3 slide-div">
+                        <div class="col-md-3 slide-div">
                             <div>
                                 <img class="slide-img" src="assets/img/007.jpg" />
                                 <div class="img-text">
@@ -470,7 +469,7 @@
                             utilizados principalmente para pesquisa e computação científica, têm diferenças
                             significativas do modelo acima, mas eles não tem grande aplicação comercial.
                         </p>
-                        <h5>Processamento</h5>
+                        <h5 class="subtitle">Processamento</h5>
                         <p>
                             Ver artigo principal: Processamento O processador (ou CPU) é uma das partes principais
                             do hardware do computador e é responsável pelos cálculos, execução de tarefas e
@@ -505,7 +504,7 @@
                             memória. São usadas frequentemente para evitar o acesso contínuo à memória principal
                             cada vez que um dado é requisitado.
                         </p>
-                        <h5>Memória</h5>
+                        <h5 class="subtitle">Memória</h5>
                         <p>
                             Ver artigo principal: Memória (computador) A memória é um dispositivo que permite ao
                             computador armazenar dados por certo tempo. Atualmente o termo é geralmente usado para
@@ -525,7 +524,7 @@
                             A memória do computador é normalmente dividida entre primária e secundária, havendo
                             também pesquisadores que afirmam haver a memória "terciária".
                         </p>
-                        <h5>Memória primária</h5>
+                        <h5 class="subtitle">Memória primária</h5>
                         <p>
                             Ver artigos principais: Memória RAM e Memória ROM A memória primária é aquela acessada
                             diretamente pela Unidade Lógica e Aritmética. Tradicionalmente essa memória pode ser de
@@ -547,7 +546,7 @@
                             Porém, os microprocessadores atuais possuem memória cache incorporada, o que aumenta em
                             muito sua velocidade.
                         </p>
-                        <h5>Memória RAM</h5>
+                        <h5 class="subtitle">Memória RAM</h5>
                         <p>
                             A <b>Memória RAM </b> (Random Access Memory) é uma sequência de células numeradas, cada
                             uma contendo uma pequena quantidade de informação. A informação pode ser uma instrução
@@ -565,7 +564,7 @@
                             computador para computador, e as tecnologias utilizadas para implementar a memória RAM
                             variam bastante. Atualmente o mais comum é a implementação em circuitos integrados.
                         </p>
-                        <h5>Memória ROM</h5>
+                        <h5 class="subtitle">Memória ROM</h5>
                         <p>
                             A memória ROM (Read-Only Memory) é aquela que só pode ser lida e os dados não são
                             perdidos com o desligamento do computador. A diferença entre a memória RAM e a ROM é que
@@ -599,7 +598,7 @@
                             Supostamente, consideramos que a memória terciária está permanentemente ligada ao
                             computador.
                         </p>
-                        <h5>Memória terciária</h5>
+                        <h5 class="subtitle">Memória terciária</h5>
                         <p>
                             Fita magnética para gravação de dados Sistemas mais complexos de computação podem
                             incluir um terceiro nível de memória, com acesso ainda mais lento que o da memória
@@ -626,7 +625,7 @@
                             torna possível o acesso a informação a partir de qualquer dispositivo conectado à
                             Internet.
                         </p>
-                        <h5>Entrada e saída</h5>
+                        <h5 class="subtitle">Entrada e saída</h5>
                         <p>
                             Ver artigo principal: E/S
                         </p>
@@ -654,7 +653,7 @@
                             o modem e o drive de disquete. Atualmente, outro dispositivo híbrido de dados é a rede
                             de computadores.
                         </p>
-                        <h5>Barramentos</h5>
+                        <h5 class="subtitle">Barramentos</h5>
                         <p>
                             Para interligar todos esses dispositivos existe uma placa de suporte especial, a
                             placa-mãe, que através de barramentos, fios e soquetes conecta todos os dispositivos.
@@ -732,7 +731,7 @@
                             ainda não conseguem determinar instintivamente uma maneira mais eficiente de realizar sua
                             tarefa, pois não possuem conhecimento para tal.[6]
                         </p>
-                        <h5>Programas</h5>
+                        <h5 class="subtitle">Programas</h5>
                         <p>
                             Ver artigo principal: Programa de computador Programas são simplesmente grandes listas de
                             instruções para o computador executar, tais com tabelas de dados. Muitos programas de
@@ -769,7 +768,7 @@
                     </section>
                     <section class="row col-12">
 
-                        <div class="col-9">
+                        <div class="col-md-9">
                             <h4 class='subtitle' id="impacto">Impactos do computador na sociedade</h4>
 
                             <p>
@@ -804,7 +803,7 @@
                                 custos.
                             </p>
                         </div>
-                        <div class="col-3 slide-div">
+                        <div class="col-md-3 slide-div">
                             <div>
                                 <img class="slide-img" src="assets/img/008.jpg" />
                                 <div class="img-text">
@@ -893,6 +892,41 @@
                     <br />
                     <p class="msg-modal-body"> Esta página só pode ser editada por usuários com contas autoconfirmadas.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="input-group">
+                        <span class="input-group-text modal-search-icon"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control modal-search" placeholder="Pesquisar na Wikipédia"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    Recente
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                            Um primeiro item de link
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                            Um segundo item de link
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                            Um terceiro item de link
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                            Um quarto item de link
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

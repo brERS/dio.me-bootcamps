@@ -10,7 +10,7 @@
     --fake-hr: #dee2e6;
     --custom-color: #fff;
     --search-background-color: rgb(255, 255, 255);
-    --serach-border-color: rgb(199, 197, 197);
+    --search-border-color: rgb(199, 197, 197);
     --box-shadow: rgb(163, 163, 163) 0 0 0.3rem;
     --scroll: rgb(199, 197, 197); 
 
@@ -36,7 +36,7 @@ body {
     --fake-hr: #d6d4d4;
     --custom-color: #1b1b1b;
     --search-background-color: #363636;
-    --serach-border-color: rgb(199, 197, 197);
+    --search-border-color: rgb(199, 197, 197);
     --box-shadow: #76777e 0 0 0.3rem !important;
     
   }
@@ -89,43 +89,26 @@ body {
 }
 
 .header-search-div {
-    text-align:center;
-    padding: 0.1rem 0 0 2.5rem ;
+    position: relative;
+    text-align:center;  
+    margin-left: 0.5rem;
 }
 
 .header-search-form {
-    display:inline;
     font-size:1rem;
-    border-radius: 8rem;
-    border:0.1rem solid var(--serach-border-color);
+    border-radius: 50%;
+    border:0.1rem solid var(--search-border-color);
     padding:0.5rem;
-    background: var(--search-background-color);
+    background: var(--search-background-color);    
+    cursor: pointer; 
 }
 
 .header-search-label {
-    display:inline-block;
-    margin-top:0.3rem;
+    margin-top:0.5rem;
     color: var(--text-color);
-    position: relative;
+    cursor: pointer; 
 }
 
-#header-search{
-    transition:all 0.2s ease-out;
-    width:0.1rem;
-    border-radius:0;
-    box-shadow:none;
-    outline: none;
-    padding:0;
-    margin:0;
-    border:0;
-    background-color: transparent;
-    opacity:0;
-}
-
-#header-search:focus{
-    width:57%;
-    opacity:1;
-}
 
 .header-user {
     display: flex;
@@ -177,6 +160,10 @@ body {
     color: var(--text-color)
 }
 
+.nav {
+    --bs-nav-link-padding-x: 0.7rem !important;
+}
+
 .nav-tabs {
     color: var(--text-color) !important;
 }
@@ -185,6 +172,7 @@ body {
     background-color: var(--custom-color) !important;
     color: var(--text-color) !important;
     border-color: var(--header-color) !important;
+
 }
 
 .active{
@@ -193,7 +181,7 @@ body {
 
 
 main > div {
-    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 0.5rem 1.0rem 1.5rem 1.0rem;
 }
 
 .main-header {
@@ -225,9 +213,46 @@ main > div {
     color: var(--text-color);
 }
 
+.modal-search-icon {
+    color: var(--text-color);
+    font-size: 1.5rem;    
+    background-color: var(--search-background-color);
+    border-right: none !important;
+}
+
+.modal-search {
+    background-color: var(--search-background-color);
+    border-left: none !important;
+    border-color: #ced4da !important;
+    color: var(--text-color) !important;
+}
+
+input:focus {
+    background-color: var(--search-background-color) !important;
+    color: var(--text-color) !important;
+    box-shadow: none !important;
+}
+
+.list-group-item {
+    background-color: var(--search-background-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--fake-hr) !important;
+    padding: 1rem !important;
+}
+
+.list-group-item:hover {
+    background-color: var(--fake-hr) !important;
+    color: #000 !important;
+}
+
+.modal-recent-icon {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
 .modal-content {
     border-radius: 0 !important;
-    background-color: var(--custom-color) !important;
+    background-color: var(--header-color) !important;
 }
 
 .btn-modal {
@@ -322,19 +347,6 @@ main > div {
     inherits: false;
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main-aside {
     border-left: 1px solid var(--bootom-border-color); 
     border-right: 1px solid var(--bootom-border-color); 
@@ -344,7 +356,7 @@ main > div {
 }
 
 .main-aside-title {
-    padding: 0.5rem 0.5rem 0.5rem 1.8rem;
+    padding: 1rem 0.5rem 0.5rem 1.8rem;
     font-size: 1.2rem;
 }
 
@@ -360,14 +372,6 @@ main > div {
 .main-aside-ul > li > a:hover {
     text-shadow: var(--text-color) 0 0 0.1rem;
 }
-
-
-
-
-
-
-
-
 
 .slide-div {
     display: flex;
@@ -401,19 +405,17 @@ main > div {
 }
 
 .slide-img {
-    width: 85%;
+    width: 100%;
 }
 
 .img-text {
-    width: 85%;
+    width: 100%;
 }
 
 .subtitle {
     border-bottom: 0.1rem solid var(--fake-hr);
+    margin-top: 0.5rem;
 }
-
-
-
 
 .canvas-ul {
     list-style-type: none;
@@ -481,4 +483,8 @@ main > div {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--scroll);
+}
+
+p {
+    text-align: justify !important;
 }

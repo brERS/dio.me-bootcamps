@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: mac-vendors
+Version: 0.0.3
+Summary: Get vendor information from a MAC address.
+Home-page: https://github.com/brERS/dio.me-bootcamps/tree/main/Gera%C3%A7%C3%A3o%20Tech%20Unimed-BH%20-%20Ci%C3%AAncia%20de%20Dados/Descomplicando%20a%20cria%C3%A7%C3%A3o%20de%20pacotes%20de%20processamento%20de%20imagens%20em%20Python
+Author: Edgar Reis
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# mac_vendors
+
+Description. 
+- The package mac_vendors is used to:
+	
+	- Vendor: 
+		- get_by_single 
+		- get_by_tuple
+		- get_by_file
+	- Api_vendors:
+		- get_info
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install mac_vendors
+```
+
+## Usage 
+
+#### Get information from a single mac
+```python
+from mac_vendors.vendor import Vendors
+
+example = Vendors()
+example.get_by_single('78:30:3b')
+print(example.response)
+```
+
+#### Get the information through a file
+- The file must have one mac per line
+```python
+from mac_vendors.vendor import Vendors
+
+example = Vendors()
+example.get_by_file('DIR/FILE')
+print(example.response)
+```
+
+#### Get the information through a tuple
+```python
+from mac_vendors.vendor import Vendors
+
+macs = ('78:30:3b', '00:19:46')
+
+example = Vendors()
+example.get_by_tuple(*macs)
+print(example.response)
+```
+
+## Author
+Edgar Reis
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+

@@ -1,6 +1,6 @@
 from time import sleep
 
-import api_vendors
+from mac_vendors.api_vendors import MacVendors
 
 
 class Vendors:
@@ -16,7 +16,7 @@ class Vendors:
 
             if len(mac) >= 8:
 
-                response = api_vendors.MacVendors(mac)
+                response = MacVendors(mac)
                 tmp = {mac: response.vendor}
                 self.response.update(tmp)
 
@@ -32,7 +32,7 @@ class Vendors:
         with open(file, 'r', encoding='utf8') as macs:
 
             for mac in macs.readlines():
-                vendor = api_vendors.MacVendors(mac.rstrip())
+                vendor = MacVendors(mac.rstrip())
                 tmp = {mac.rstrip(): vendor.vendor}
                 self.response.update(tmp)
 
@@ -41,6 +41,6 @@ class Vendors:
     def get_by_single(self, mac):
         """Get information from a single mac"""
 
-        response = api_vendors.MacVendors(mac)
+        response = MacVendors(mac)
         tmp = {mac: response.vendor}
         self.response.update(tmp)

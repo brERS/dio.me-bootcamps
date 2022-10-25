@@ -1,5 +1,7 @@
 # mac_vendors
 
+Library created in order to facilitate the obtaining of manufacturers through MAC ADDRESS.
+
 Description. 
 - The package mac_vendors is used to:
 	
@@ -22,7 +24,7 @@ pip install mac_vendors
 
 #### Get information from a single mac
 ```python
-from mac_vendors import Vendors
+from mac_vendors.vendor import Vendors
 
 example = Vendors()
 example.get_by_single('78:30:3b')
@@ -32,7 +34,7 @@ print(example.response)
 #### Get the information through a file
 - The file must have one mac per line
 ```python
-from mac_vendors import Vendors
+from mac_vendors.vendor import Vendors
 
 example = Vendors()
 example.get_by_file('DIR/FILE')
@@ -41,7 +43,7 @@ print(example.response)
 
 #### Get the information through a tuple
 ```python
-from mac_vendors import Vendors
+from mac_vendors.vendor import Vendors
 
 macs = ('78:30:3b', '00:19:46')
 

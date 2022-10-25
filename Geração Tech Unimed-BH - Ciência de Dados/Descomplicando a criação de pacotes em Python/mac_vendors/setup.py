@@ -8,7 +8,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="mac_vendors",
-    version="0.0.1",
+    version="0.0.3",
     author="Edgar Reis",
     description="Get vendor information from a MAC address.",
     long_description=page_description,

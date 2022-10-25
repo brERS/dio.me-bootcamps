@@ -17,14 +17,14 @@ Description.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
 
 ```bash
-pip install mac_vendors
+pip install mac-vendors
 ```
 
 ## Usage 
 
 #### Get information from a single mac
 ```python
-from mac_vendors.vendor import Vendors
+from mac.vendor import Vendors
 
 example = Vendors()
 example.get_by_single('78:30:3b')
@@ -34,7 +34,7 @@ print(example.response)
 #### Get the information through a file
 - The file must have one mac per line
 ```python
-from mac_vendors.vendor import Vendors
+from mac.vendor import Vendors
 
 example = Vendors()
 example.get_by_file('DIR/FILE')
@@ -43,13 +43,54 @@ print(example.response)
 
 #### Get the information through a tuple
 ```python
-from mac_vendors.vendor import Vendors
+from mac.vendor import Vendors
 
 macs = ('78:30:3b', '00:19:46')
 
 example = Vendors()
 example.get_by_tuple(*macs)
 print(example.response)
+```
+
+## Export
+
+#### To excel
+```python
+from mac.vendor import Vendors
+
+example = Vendors()
+example.get_by_single('78:30:3b')
+
+example.to_excel(
+    path='DIR',
+    file_name='sheet_name'
+)
+```
+
+#### To CSV
+```python
+from mac.vendor import Vendors
+
+example = Vendors()
+example.get_by_single('78:30:3b')
+
+example.to_csv(
+    path='DIR',
+    file_name='sheet_name'
+)
+```
+
+#### To txt
+```python
+from mac.vendor import Vendors
+
+example = Vendors()
+example.get_by_single('78:30:3b')
+
+example.to_txt(
+    path='DIR',
+    file_name='sheet_name'
+)
 ```
 
 ## Author

@@ -589,4 +589,156 @@
 
     - values - retorna todos os valores de um dicionario
 
+
+
+<br/>
+
+### :bookmark_tabs: **Fundamentos de ETL (Extract, Transform, Load) com Python**
+#
+#### :page_facing_up: **Aula - Introdução para ETL**   
+- ETL (Extração, Transformação, Carregamento) 
+
+    - Extração
+        - O processo de extração de dados consiste em se comunicar com outros sistemas ou bancos de dados para capturar os dados que serão inseridos no destino, seja um stanging area ou outro sistema.
+        - Os dados podem ser de diversos tipos e formatos como:
+            - Pasta de Trabalho
+            - Banco de dados diversos
+            - CSV
+            - TXT
+            - JSON
     
+    - Tranformação
+        - O processo de tranformação de dados é comporto por varias etapas como padronização, limpeza, qualidade... Dados vindos de sistemas diferentes tem padrões diferentes seja de nomenclatura ou mesmo de tipos de dados.
+            - Calunas, linhas
+            - Tipos de dados
+            - Mesclar, Acrescentar
+            - Listas, Tabelas
+
+    - Carregar
+        - O processo de load é a etapa final onde os dados são lidos das areas de staging e preparação de dados, carregados no data warehouse ou data mart final.
+            - Para o modelo de dados
+
+- Ferramentas de ETL
+    - IBM information
+    - Server (Data Stage)
+    - Oracle Data Integrator (ODI)
+    - Informatica Power Center
+    - Microsoft integration Service (SSIS)
+
+
+#### :page_facing_up: **Aula - Ferramentas aplicadas para ETL**
+- ETL para BIG Data
+    - SQOOP - Ferramenta para movimentar dados dentre bancos de dados relacionais e o ambiente hadoop.
+
+        - HADDOP é uma plataforma de doftware em java de computação distribuída voltada para clusters e processamento de grandes volumes de dados, com atenção a tolerância a falhas.
+
+    - HIVE - Ambiente de SQL sobre um cluster Hadoop
+
+    - PIG - Ferramenta de Script para transformação e processamento de dados.
+
+    - SPARK - Framework de processamento em memoria.
+
+#### :page_facing_up: **Aula - Framework Luigi para ETL com Python**
+- Luigi é um framework de execução criado pelo Spotify que cria pipelines de dados e Python. Ele lida com resolução de dependências, gerenciamento de fluxo de trabalho, visualização, tratamento de falhas, integração de linha de comando e muito mais.
+    
+    - **Target** em plavras simples, um alvo contém a saída de uma tarefa. um destino pode ser um local arquivo, mysql, etc.
+    
+    - Task
+
+        - require() Estafunção membroda classe task contém todas as intâncias de tarefas que devem ser executadas antes da tarefa atual.
+
+        - output() Este método contém o destino onde a saída da tarefa será armazenada. Isso pode conter um ou mais objetos de destino.
+
+        -  run() Este método contém a lógica real para a executar uma tarefa.
+
+### :bookmark_tabs: **Descomplicando a criação de pacotes de processamento de imagens em Python**
+#
+#### :page_facing_up: **Módulo vs Pacote**
+- **Módulo**: objeto que serve como unidade organizacional do código que é carregado pelo comando de import. 
+
+- **Pacote**: coleção de módulos com hierarquia.
+
+#### :page_facing_up: **Conceitos Sobre pacotes**
+- **Pypi**: repositório público oficial de pacotes
+- **Wheel e Sdist**: dois tipos de distribuições
+- **Setuptools**: pacote usado em setup.py para gerar as distribuições
+- **Twine**: pacote usado para subir as distribuições no repositório Pypi
+
+#### :page_facing_up: **Exemplos de estruturas**
+- Pacote Simples
+    ```
+    project_name/
+        README.py
+        setup.py
+        requirements.txt
+        package_name/
+            __init__.py
+            file1_name.py
+            file2_name.py
+    ```
+
+- Pacote Complexo
+    ```
+    project_name/
+        README.py
+        setup.py
+        requirements.txt
+        modulo1_name/
+            __init__.py
+            file1_name.py
+            file2_name.py
+        modulo2_name/
+            __init__.py
+            file1_name.py
+            file2_name.py
+    ``` 
+
+- Arquivo requirements.txt
+    - Usado para passar as dependências que devem ser instaladas com o seu pacote. Opcionalmente, podem ser especificadas as versões.
+
+- Arquivo setup.py
+    - Usado para especificar como o pacote deve ser construído.
+    - Documentação: https://setuptools.readthedocs.io/en/latest/setuptools.html
+
+- Arquivo README.md
+    - Será exibido como documentação na página do Pypi do seu pacote. Foi usado markdown.
+
+#### :page_facing_up: **Distribuições**
+- Para subir o pacote, criar uma distribuição binária ou distribuição de código fonte. As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte, apenas se necessário. De qualquer forma, iremos criar ambas distribuições.
+
+- Passos para gerar as distribuições
+    
+    - Pré requisito
+        - python -m pip install --upgrade pip
+        - python -m pip install --user twine
+        - python -m pip install --user setuptools
+
+    - Criar pacote
+        - Acessar a raiz do projeto
+        - Comandos de instalação
+        - Comando para criar a distribuição
+        - python setup.py sdist bdist_wheel
+
+#### :page_facing_up: **Criando contas no Pypi**
+    - https://pypi.org/account/register/
+    - https://test.pypi.org/account/register/
+
+- Comando para publicar no Test Pypi
+    ```
+    python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+    ```
+
+- Comando para instalar o pacote de teste
+    ```
+    pip install –-index-url https://test.pypi.org/simple/  NOME DO PACOTE
+    ```
+
+- Comando para publicar no Pypi
+    ```
+    python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+    ```
+
+- Comando para instalar o pacote
+    ```
+    python -m pip install NOME DO PACOTE
+    ```

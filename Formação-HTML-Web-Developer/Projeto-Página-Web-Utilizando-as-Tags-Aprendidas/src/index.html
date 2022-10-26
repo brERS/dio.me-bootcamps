@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Dio.me | Home </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#root').toggleClass('active');
+                $('.initial').toggleClass('active');
+                $('.header-items').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- Sidebar  -->
+        <div id="sidebar">
+            <div class="sidebar-header">
+                <img src="https://hermes.digitalinnovation.one/assets/diome/logo.svg" alt="" class="sidebar-icon">
+            </div>
+
+            <div class="sidebar-content">
+
+                <div class="profile">
+                    <div class="prof">
+                        <a class="" href="#">
+                            <div class="row">
+                                <div class="col-3 users">
+                                    <img class="img-users" title="EDGAR SILVA" src="../assets/img/01.png">
+                                    <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                </div>
+                                <div class="col-9">
+                                    <div class="row">
+                                        <span class="users-status">
+                                            <span class="users-name">EDGAR SILVA </span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 100%;" aria-valuemax="100">
+                                                    NÍVEL 14
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="progress-bar-content">
+                                            <span class="xp">Experiência 15210/16355</span>
+                                            <div class="progress progress-xp">
+                                                <div class="progress-bar-xp" style="width:90%;" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="available">
+                    <div class="available-content">
+                        Disponível para ofertas de emprego?
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" checked>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-force">
+                    Força do perfil na DIO: <span class="profile-level">Master</span>
+                    <div class="profile-bar-content">
+                        <div class="profile-bar-progress"></div>
+                        <div>
+                            <svg class='profile-bar-star' viewBox="0 -7 26 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.1433 1.03186L16.9549 7.91275L17.0632 8.10835L17.2813 8.15799L24.7284 9.85363L19.6373 15.8447L19.5003 16.0058L19.5206 16.2164L20.2874 24.1796L13.3535 20.9668L13.1433 20.8694L12.9331 20.9668L5.99917 24.1796L6.76597 16.2164L6.78625 16.0058L6.64929 15.8447L1.55818 9.85363L9.0053 8.15799L9.22332 8.10835L9.33167 7.91275L13.1433 1.03186Z"
+                                    fill="#1D222C" stroke="#3E4656">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="row profile-ello">
+                        <div class="col-3">
+                            <img class="profile-img-master"
+                                src="https://hermes.digitalinnovation.one/assets/profile-force/master.png">
+                        </div>
+                        <div class="col-9 profile-ello-text">
+                            Seu perfil é Master e é incrível que você tenha chegado até aqui. Continue ganhando força!
+                            <br />
+                            <button class="profile-ello-btn">Ver mais.</button>
+                        </div>
+                    </div>
+
+                    <div class="row sidebar-buttons-one">
+                        <button class="dropdown-btn">
+                            <div class="row">
+                                <div class="col-10 btn-title program-title"> <i class="bi bi-collection-play"></i> MEUS
+                                    PROGRAMAS
+                                </div>
+                                <span class="col-2">
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                                <div class="col-10 dropdown-btn-line"></div>
+                            </div>
+                        </button>
+
+                        <ul class="dropdown-container">
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/python.webp">
+                                    <span>Formação Python Developer</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/unimed.png">
+                                    <span>Geração Tech Unimed-BH - Ciência de Dados</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/css.webp">
+                                    <span>Formação CSS Web Developer</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/react.webp">
+                                    <span>Formação React Developer</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/js.webp">
+                                    <span>Formação JavaScript Developer</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/bk.webp">
+                                    <span>Formação Blockchain Specialist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/ml.webp">
+                                    <span>Formação Machine Learning Specialist</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <button class="dropdown-btn">
+                            <div class="row">
+                                <div class="col-10 btn-title curse-title"> <i class="bi bi-code-slash"></i> MEUS
+                                    CURSOS
+                                </div>
+                                <span class="col-2">
+                                    <i class="bi bi-chevron-right"></i>
+                                </span>
+                                <div class="col-10 dropdown-btn-line"></div>
+                            </div>
+                        </button>
+                        <ul class="dropdown-container">
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/js-two.png" alt="course">
+                                    <span>Introdução ao Desenvolvimento Web com JavaScript</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/ml-two.webp" alt="course">
+                                    <span>Introdução ao Machine Learning</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/css-two.webp" alt="course">
+                                    <span>Fundamentos do CSS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex flex-row" href="#">
+                                    <img src="../assets/img/react-two.webp" alt="course">
+                                    <span>Configuração de Ambiente React</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <button class="dropdown-btn">
+                            <div class="row">
+                                <div class="col-12 btn-title speak-title">
+                                    <i class="bi bi-headset"></i>
+                                    Precisa de Ajuda ?
+                                </div>
+                                <div class="col-10 dropdown-btn-line"></div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="row">
+                        <button class="dropdown-btn">
+                            <div class="row">
+                                <div class="col-12 btn-title doll-title">
+                                    <i class="bi bi-cash-coin"></i>
+                                    Ganhe R$ 350,00
+                                </div>
+                                <div class="col-10 dropdown-btn-line"></div>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+                <footer>
+                    <div class="footer-content">
+                        Desenvolvido por Edgar Reis
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <header>
+            <div class="row container-fluid header-container">
+                <div class="col-12">
+                    <div class="header-menu">
+                        <div class="header-menu-btn">
+                            <button type="button" id="sidebarCollapse" class="menu-btn">
+                                <i class="bi bi-list header-menu-icon"></i>
+                            </button>
+
+                            <nav class="navbar navbar-expand-lg bg-black">
+                                <div class="container-fluid nav-content">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent">
+                                        <i class="bi bi-chevron-double-down"></i>
+                                    </button>
+                                    <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item initial">
+                                                <a href="#" class="nav-link nav-hv-one" type="button">Play</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link nav-hv-two" type="button">
+                                                    Global
+                                                    <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 23 22">
+                                                        <path fill="#E5E145"
+                                                            d="M12.966 7.405c.985.382 2.136-.149 2.57-1.186.433-1.038-.014-2.188-1-2.57-.986-.382-2.136.149-2.57 1.186-.433 1.038.014 2.188 1 2.57zM8.491 18.53c.986.382 2.137-.149 2.57-1.186.434-1.038-.013-2.188-.999-2.57-.986-.382-2.136.149-2.57 1.186-.434 1.038.014 2.188 1 2.57zM16.292 15.206c.986.382 2.137-.15 2.57-1.186.434-1.037-.014-2.188-1-2.57-.985-.382-2.136.149-2.57 1.186-.433 1.037.015 2.188 1 2.57zM5.164 10.73c.986.381 2.137-.15 2.57-1.187.434-1.037-.014-2.188-1-2.57-.985-.382-2.136.15-2.57 1.186-.433 1.037.015 2.188 1 2.57zM13.08 18.484c.984.382 2.135-.15 2.57-1.188.433-1.038-.013-2.189-.998-2.57-.985-.382-2.136.15-2.57 1.188-.434 1.038.012 2.189.997 2.57zM8.376 7.453c.985.382 2.136-.15 2.57-1.188.434-1.038-.012-2.189-.997-2.57-.985-.382-2.136.15-2.57 1.188-.435 1.038.012 2.189.997 2.57zM16.241 10.621c.985.381 2.136-.15 2.57-1.188.434-1.038-.012-2.189-.997-2.57-.985-.382-2.136.15-2.57 1.188-.434 1.038.012 2.188.997 2.57zM5.213 15.32c.985.382 2.136-.15 2.57-1.188.434-1.038-.012-2.189-.997-2.57-.985-.382-2.136.15-2.57 1.188-.435 1.038.012 2.189.997 2.57z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link nav-hv-two" type="button">
+                                                    English4Tech
+                                                    <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 23 22">
+                                                        <path fill="#E5E145"
+                                                            d="M12.966 7.405c.985.382 2.136-.149 2.57-1.186.433-1.038-.014-2.188-1-2.57-.986-.382-2.136.149-2.57 1.186-.433 1.038.014 2.188 1 2.57zM8.491 18.53c.986.382 2.137-.149 2.57-1.186.434-1.038-.013-2.188-.999-2.57-.986-.382-2.136.149-2.57 1.186-.434 1.038.014 2.188 1 2.57zM16.292 15.206c.986.382 2.137-.15 2.57-1.186.434-1.037-.014-2.188-1-2.57-.985-.382-2.136.149-2.57 1.186-.433 1.037.015 2.188 1 2.57zM5.164 10.73c.986.381 2.137-.15 2.57-1.187.434-1.037-.014-2.188-1-2.57-.985-.382-2.136.15-2.57 1.186-.433 1.037.015 2.188 1 2.57zM13.08 18.484c.984.382 2.135-.15 2.57-1.188.433-1.038-.013-2.189-.998-2.57-.985-.382-2.136.15-2.57 1.188-.434 1.038.012 2.189.997 2.57zM8.376 7.453c.985.382 2.136-.15 2.57-1.188.434-1.038-.012-2.189-.997-2.57-.985-.382-2.136.15-2.57 1.188-.435 1.038.012 2.189.997 2.57zM16.241 10.621c.985.381 2.136-.15 2.57-1.188.434-1.038-.012-2.189-.997-2.57-.985-.382-2.136.15-2.57 1.188-.434 1.038.012 2.188.997 2.57zM5.213 15.32c.985.382 2.136-.15 2.57-1.188.434-1.038-.012-2.189-.997-2.57-.985-.382-2.136.15-2.57 1.188-.435 1.038.012 2.189.997 2.57z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link nav-hv-one" type="button">Artigos</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link nav-hv-one" type="button">Rooms</a>
+                                            </li>
+                                            <li class="nav-item nav-hv-three">
+                                                <a href="#" class="nav-link" type="button">Seja Premium</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="header-items">
+                                <div class="header-items-users">
+                                    <button class="search-button" type="button" data-bs-toggle="dropdown"
+                                        data-bs-target="#staticBackdrop">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu search-ul">
+                                        <div class="search-ul-body">
+                                            <div class="search-div">
+                                                <div class="input-group">
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-search"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="Pesquisar"
+                                                        aria-label="Username" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                            <div class="search-recent">
+                                                Recente
+                                                <div class="list-group search-div">
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                                                        Formação Python Developer
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                                                        Formação CSS Web Developer
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                                                        Formação Machine Learning Specialist
+                                                    </a>
+                                                    <a href="#" class="list-group-item list-group-item-action">
+                                                        <i class="modal-recent-icon bi bi-arrow-counterclockwise"></i>
+                                                        Formação HTML Developer
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    <button class="bell-button" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-bell-fill"></i>
+                                        <span>3</span>
+                                    </button>
+                                    <ul class="dropdown-menu bell-ul">
+                                        <div>
+                                            <h3 class="bell-ul-header">Notificações</h3>
+                                            <div class="bell-ul-body">
+                                                <div class="mb-2 card">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center row">
+                                                            <div class="col-md-11">
+                                                                <a href="#" class="bell-a">
+                                                                    <div
+                                                                        class="d-flex text-center align-items-center row">
+                                                                        <div class="col-md-2">
+                                                                            <img src="../assets/img/bell-img.png"
+                                                                                class="bell-img">
+                                                                        </div>
+                                                                        <div class="col-md-10">
+                                                                            <div class="d-flex row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="text-dark">
+                                                                                        <strong>Jornada DevOps com AWS –
+                                                                                            Impulso</strong> A Impulso
+                                                                                        em parceria com a DIO acaba de
+                                                                                        lançar mais um super bootcamp e
+                                                                                        dessa vez você vai ter a
+                                                                                        oportunidade de impulsionar os
+                                                                                        seus conhecimentos em Linux,
+                                                                                        Docker, Kubernets e AWS.
+                                                                                        Participe!
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <div class="row">
+                                                                    <div
+                                                                        class="d-flex justify-content-center col-md-12">
+                                                                        <button type="button" class="p-0 btn btn-link">
+                                                                            <i class="bi bi-circle"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 card">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center row">
+                                                            <div class="col-md-11">
+                                                                <a href="#" class="bell-a">
+                                                                    <div
+                                                                        class="d-flex text-center align-items-center row">
+                                                                        <div class="col-md-2">
+                                                                            <img src="../assets/img/bell-img.png"
+                                                                                class="bell-img">
+                                                                        </div>
+                                                                        <div class="col-md-10">
+                                                                            <div class="d-flex row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="text-dark">
+                                                                                        <strong>Conheça o Orange Tech
+                                                                                            +</strong> A trilha de 78
+                                                                                        horas de experiências
+                                                                                        educacionais em front-end vai
+                                                                                        abordar do zero tecnologias como
+                                                                                        HTML, JavaScript, CSS,
+                                                                                        TypeScript e React para dar
+                                                                                        oportunidade de estudo até mesmo
+                                                                                        para quem nunca viu nada do
+                                                                                        assunto.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <div class="row">
+                                                                    <div
+                                                                        class="d-flex justify-content-center col-md-12">
+                                                                        <button type="button" class="p-0 btn btn-link">
+                                                                            <i class="bi bi-circle"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 card">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center row">
+                                                            <div class="col-md-11">
+                                                                <a href="#" class="bell-a">
+                                                                    <div
+                                                                        class="d-flex text-center align-items-center row">
+                                                                        <div class="col-md-2">
+                                                                            <img src="../assets/img/bell-img.png"
+                                                                                class="bell-img">
+                                                                        </div>
+                                                                        <div class="col-md-10">
+                                                                            <div class="d-flex row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="text-dark">
+                                                                                        <strong>Orange Tech +</strong>
+                                                                                        Um bootcamp para quem quer se
+                                                                                        preparar para entrar no mercado
+                                                                                        tech através de uma trilha
+                                                                                        completa de tecnologias
+                                                                                        front-end. Ele é indicado
+                                                                                        principalmente para mulheres,
+                                                                                        pretos e pardos e grupos de
+                                                                                        diversidade. Inscreva-se e
+                                                                                        participe!
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <div class="row">
+                                                                    <div
+                                                                        class="d-flex justify-content-center col-md-12">
+                                                                        <button type="button" class="p-0 btn btn-link">
+                                                                            <i class="bi bi-circle"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+
+                                    <button class="heart-button" type="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-suit-heart-fill"></i>
+                                        <span>5</span>
+                                    </button>
+                                    <ul class="dropdown-menu heart-ul">
+                                        <div>
+                                            <h3 class="heart-ul-header">Recuperação dos Hearts</h3>
+                                            <div class="heart-ul-body">
+                                                <div class="mb-2 card">
+                                                    <div class="card-body">
+                                                        <div class="text-center">
+                                                            <strong> Você está com todos os hearts completos!</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+
+                                    <button class="users-end" type="button" data-bs-toggle="dropdown">
+                                        <img class="users-end-img" src="../assets/img/01.png">
+                                        <span class="users-span">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu users-ul">
+                                        <h3 class="heart-ul-header">Opções</h3>
+                                        <li class="users-items">
+                                            <button class="d-flex col-12 users-btn">
+                                                <i class="bi bi-file-text"></i>
+                                                Currículo
+                                            </button>
+                                        </li>
+                                        <li class="users-items">
+                                            <button class="d-flex col-12 users-btn">
+                                                <i class="bi bi-emoji-sunglasses"></i>
+                                                Perfil
+                                            </button>
+                                        </li>
+                                        <li class="users-items">
+                                            <button class="d-flex col-12 users-btn">
+                                                <i class="bi bi-card-heading"></i>
+                                                Certificados
+                                            </button>
+                                        </li>
+                                        <li class="users-items">
+                                            <button class="d-flex col-12 users-btn">
+                                                <i class="bi bi-card-text"></i>
+                                                Oportunidades
+                                            </button>
+                                        </li>
+                                        <li class="users-items">
+                                            <button class="d-flex col-12 users-btn">
+                                                <i class="bi bi-cart-check"></i>
+                                                Assinatura
+                                            </button>
+                                        </li>
+                                        <li class="users-items">
+                                            <button class="d-flex col-12 users-btn">
+                                                <i class="bi bi-headset"></i>
+                                                Precisa de Ajuda?
+                                            </button>
+                                        </li>
+                                        <li class="users-items">
+                                            <button class="d-flex col-12 users-btn">
+                                                <i class="bi bi-box-arrow-in-right"></i>
+                                                Sair
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <!-- Page Content  -->
+        <main id="content">
+            <div class="row">
+                <article class="col-md-9">
+                    <section>
+                        <div class="col-12 img-container">
+                            <a href="#" class="img-slide img-one"></a>
+                            <a href="#" class="img-slide img-two"></a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="row feed">
+                            <div class="col-2">
+                                <button>
+                                    FEED
+                                </button>
+                            </div>
+                            <span class="col-10 btn-end">
+                                <div>
+                                    <button class="btn-feed">ARTIGOS</button>
+                                    <div class="btn-feed-line"></div>
+                                </div>
+                                <div>
+                                    <button class="btn-feed">TÓPICOS</button>
+                                    <div class="btn-feed-line"></div>
+                                </div>
+                                <div>
+                                    <button class="btn-feed">TODOS</button>
+                                    <div class="btn-feed-line"></div>
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="feed-contents col-12">
+                            <div class="mb-3 feed-card">
+                                <div class="feed-img feed01"></div>
+                                <div class="feed-card-body">
+                                    <div class="row feed-users">
+                                        <div class="col-1 feed-users-img">
+                                            <img class="img-users" title="Joana Silva" src="../assets/img/user-01.jpg">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row feed-users-info">
+                                                <span class="feed-users-name">Joana Silva </span>
+                                                <span class="feed-users-name-time"> 2 minutos
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="feed-card-title">A sua hora é agora !</h5>
+                                    <div class="mb-4">
+                                        <p class="card-text">
+                                            Em nenhum momento estivemos com tantas oportunidades como agora, venho aqui
+                                            agradeçer a #dio e muitas outras empresas de tecnologia, por investir na
+                                            formação de profissionais que ainda não foram ...
+                                            <a class="feed-btn-plus" href="#">
+                                                Ver Mais
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="mb-2">
+                                        <i class="bi bi-fire"></i> 526
+                                        <span class="space"></span>
+                                        <i class="bi bi-chat-dots-fill"></i> 15
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 feed-card">
+                                <div class="feed-img feed02"></div>
+                                <div class="feed-card-body">
+                                    <div class="row feed-users">
+                                        <div class="col-1 feed-users-img">
+                                            <img class="img-users" title="Maria Viana" src="../assets/img/user-02.jpg">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row feed-users-info">
+                                                <span class="feed-users-name">Maria Viana </span>
+                                                <span class="feed-users-name-time"> 13 minutos
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="feed-card-title">Listas de Habilidades interpessoais (Soft Skills) para
+                                        agregar no seu currículo.</h5>
+                                    <div class="mb-4">
+                                        <p class="card-text">
+                                            Hoje em dia, sabemos que as empresas não focam somente em habilidades
+                                            técnicas, elas estão em busca de profissionais que nãotenham somente as
+                                            melhores hard skiils - procuram soft skills também...
+                                            <a class="feed-btn-plus" href="#">
+                                                Ver Mais
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="mb-2">
+                                        <i class="bi bi-fire"></i> 452
+                                        <span class="space"></span>
+                                        <i class="bi bi-chat-dots-fill"></i> 30
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 feed-card">
+                                <div class="feed-img feed03"></div>
+                                <div class="feed-card-body">
+                                    <div class="row feed-users">
+                                        <div class="col-1 feed-users-img">
+                                            <img class="img-users" title="joão Ribas" src="../assets/img/h-user-01.jpg">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row feed-users-info">
+                                                <span class="feed-users-name">João Assis </span>
+                                                <span class="feed-users-name-time"> 45 minutos
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="feed-card-title">
+                                        Você é um Dev que resolve Tasks ou Problemas?
+                                    </h5>
+                                    <div class="mb-4">
+                                        <p class="card-text">
+                                            Queria compartilhar um aprendizado que obtive como desenvolvedor e que todos
+                                            deveriam saber. Mas infelizmente muitos Devs ainda usam seus esforços de
+                                            forma errada. Durante minhas experiências convivi...
+                                            <a class="feed-btn-plus" href="#">
+                                                Ver Mais
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="mb-2">
+                                        <i class="bi bi-fire"></i> 356
+                                        <span class="space"></span>
+                                        <i class="bi bi-chat-dots-fill"></i> 8
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 feed-card">
+                                <button class="col-6 offset-3 btn art-btn">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    CARREGAR MAIS
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <aside class="col-md-3">
+                    <section>
+                        <div class="row">
+                            <button class="rank-btn">
+                                <div class="row">
+                                    <div class="rank-btn-title rank-title-one">
+                                        #RANKING DA SEMANA
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div class="rank">
+                                <a class="" href="#">
+                                    <div class="row">
+                                        <div class="col-3 rank-users">
+                                            <img class="img-users" title="Joana Silva" src="../assets/img/user-01.jpg">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <span class="rank-users-name">Joana Silva </span>
+                                                <span class="rank-progress-bar-content">
+                                                    <span class="xp">XP 39760 / 39760</span>
+                                                    <div class="progress rank-progress-xp">
+                                                        <div class="progress-bar-xp" style="width:100%;"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="rank">
+                                <a class="" href="#">
+                                    <div class="row">
+                                        <div class="col-3 rank-users">
+                                            <img class="img-users" title="João Assis" src="../assets/img/h-user-01.jpg">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <span class="rank-users-name">João Assis </span>
+                                                <span class="rank-progress-bar-content">
+                                                    <span class="xp">XP 35386 / 39760</span>
+                                                    <div class="progress rank-progress-xp">
+                                                        <div class="progress-bar-xp" style="width:89%;"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="rank">
+                                <a class="" href="#">
+                                    <div class="row">
+                                        <div class="col-3 rank-users">
+                                            <img class="img-users" title="Maria Viana" src="../assets/img/user-02.jpg">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <span class="rank-users-name">Maria Viana </span>
+                                                <span class="rank-progress-bar-content">
+                                                    <span class="xp">XP 33617 / 39760</span>
+                                                    <div class="progress rank-progress-xp">
+                                                        <div class="progress-bar-xp" style="width:84%;"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="rank">
+                                <a class="" href="#">
+                                    <div class="row">
+                                        <div class="col-3 rank-users">
+                                            <img class="img-users" title="Rafael Ribas"
+                                                src="../assets/img/h-user-02.webp">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <span class="rank-users-name">Rafael Ribas </span>
+                                                <span class="rank-progress-bar-content">
+                                                    <span class="xp">XP 28574 / 39760</span>
+                                                    <div class="progress rank-progress-xp">
+                                                        <div class="progress-bar-xp" style="width:69%;"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="rank">
+                                <a class="" href="#">
+                                    <div class="row">
+                                        <div class="col-3 rank-users">
+                                            <img class="img-users" title="Leticia Silva"
+                                                src="../assets/img/user-03.jpg">
+                                            <img class="img-flag" title="Brasil" src="../assets/img/02.png">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <span class="rank-users-name">Leticia Silva </span>
+                                                <span class="rank-progress-bar-content">
+                                                    <span class="xp">XP 22859 / 39760</span>
+                                                    <div class="progress rank-progress-xp">
+                                                        <div class="progress-bar-xp" style="width:49%;"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="rank-btn">
+                                <div class="row">
+                                    <div class="rank-btn-title rank-title">
+                                        <i class="bi bi-eye"></i> VER TODOS
+                                    </div>
+                                    <div class="col-10 rank-btn-line"></div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <button class="rank-btn">
+                                <div class="row">
+                                    <div class="rank-btn-title">
+                                        # ÚLTIMOS TOP ARTIGOS
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="row art">
+                            <button class="art-btn">
+                                <span>
+                                    DIO News #044
+                                </span>
+                                <div>
+                                    <i class="bi bi-chat-dots-fill"></i> 6
+                                    <span class="space"></span>
+                                    <i class="bi bi-eye-fill"></i> 930
+                                </div>
+                            </button>
+                        </div>
+                        <div class="row art">
+                            <button class="art-btn">
+                                <span>
+                                    ESCREVA UM ARTIGO E CONCORRA A UM KIT DIO
+                                </span>
+                                <div>
+                                    <i class="bi bi-chat-dots-fill"></i> 18
+                                    <span class="space"></span>
+                                    <i class="bi bi-eye-fill"></i> 834
+                                </div>
+                            </button>
+                        </div>
+                        <div class="row art">
+                            <button class="art-btn">
+                                <span>
+                                    FAÇA PARTE DO TIME DE EMBAIXADORES DA DIO
+                                </span>
+                                <div>
+                                    <i class="bi bi-chat-dots-fill"></i> 20
+                                    <span class="space"></span>
+                                    <i class="bi bi-eye-fill"></i> 727
+                                </div>
+                            </button>
+                        </div>
+                        <div class="row art">
+                            <button class="art-btn">
+                                <span>
+                                    DEV. segue DEV.
+                                </span>
+                                <div>
+                                    <i class="bi bi-chat-dots-fill"></i> 13
+                                    <span class="space"></span>
+                                    <i class="bi bi-eye-fill"></i> 606
+                                </div>
+                            </button>
+                        </div>
+                        <div class="row art mb-4">
+                            <button class="art-btn">
+                                <span>
+                                    Como terminar o bootcamp a tempo? veja abaixo!
+                                </span>
+                                <div>
+                                    <i class="bi bi-chat-dots-fill"></i> 15
+                                    <span class="space"></span>
+                                    <i class="bi bi-eye-fill"></i> 526
+                                </div>
+                            </button>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("program-active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <script>
+        var myIndex = 0;
+        looping();
+
+        function looping() {
+            var i;
+            var x = document.getElementsByClassName("img-slide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(looping, 3000);
+        }
+    </script>
+</body>
+
+</html>

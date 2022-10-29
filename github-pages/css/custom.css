@@ -300,6 +300,12 @@ main {
     transition: all 1s ease-in-out;
 }
 
+.projetos-py-img-three {
+    background: url("../img/py-img-three.png");
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease-in-out;
+}
 
 .description {
   height: 0;

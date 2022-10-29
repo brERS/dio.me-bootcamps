@@ -285,6 +285,22 @@ main {
     transition: all 1s ease-in-out;
 }
 
+
+.projetos-py-img-one {
+    background: url("../img/py-img-one.png");
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease-in-out;
+}
+
+.projetos-py-img-two {
+    background: url("../img/py-img-two.png");
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease-in-out;
+}
+
+
 .description {
   height: 0;
   padding: 1rem;
